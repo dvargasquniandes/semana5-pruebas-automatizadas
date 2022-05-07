@@ -21,3 +21,9 @@
 10. Loguearse, crear tag, entrar a un post y relacionar el tag con el post 
 11. Loguearse, editar tag, entrar a un post y relacionar el tag con el post 
 12. Loguearse, eliminar tag, entrar a un post y ver que se eliminó 
+
+#### Ejecutar pruebas Cypress 🚀
+1. Entrar al directorio ghost-cypress
+2. Ejecutar el comando npm install
+3. Ejecutar el comando npx cypress open
+4. Se abrirá una ventana con las pruebas a testear
