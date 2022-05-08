@@ -1,4 +1,5 @@
 import { faker } from '@faker-js/faker';
+import { utils } from '../plugins/utils';
 
 const user = {
     email: "ghost-author@example.com",
@@ -15,24 +16,14 @@ describe('Escenario de prueba 8', function () {
     })
     it('Loguearse, crear una página, eliminarla, salir del admin, y revisar que no esté la página', function () {
         // Login
-        cy.get('input[name="identification"]').type(user.email)
-        cy.get('input[name="password"]').type(user.password)
-        cy.get('button[type="submit"]').click()
-        cy.wait(1000)
+        utils.autenticar(user)
 
         // Crear página
-        cy.get('li').contains("Pages").first().click()
-        cy.get('a').contains("New page").click()
-        cy.get('textarea[placeholder="Page Title"]').type(`Escenario de prueba 5 - ${id}`)
-        cy.get('div[class="koenig-editor__editor __mobiledoc-editor __has-no-content"]').type("Este es un test para el escenario de prueba 5")
-        cy.get('div[class="gh-publishmenu ember-view"]').click()
-        cy.get('button[class="gh-btn gh-btn-blue gh-publishmenu-button gh-btn-icon ember-view"]').click()
-        cy.wait(1000)
+        utils.crearPagina(`Escenario de prueba 8 - ${id}`, "Este es un test para el escenario de prueba 8")
+        utils.publicarPagina()
 
         // Eliminar página
-        cy.get('button[class="post-settings"]').click()
-        cy.get('button[class="gh-btn gh-btn-hover-red gh-btn-icon settings-menu-delete-button"]').click()
-        cy.get('button[class="gh-btn gh-btn-red gh-btn-icon ember-view"]').contains("Delete").click()
+        utils.eliminarPagina()
 
         // Verificar que la página no está en el listado
         cy.get('li[class="gh-list-row gh-posts-list-item"]').contains(`Escenario de prueba 8 - ${id}`).should("not.exist")

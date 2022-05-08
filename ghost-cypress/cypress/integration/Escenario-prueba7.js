@@ -1,4 +1,5 @@
 import { faker } from '@faker-js/faker';
+import { utils } from '../plugins/utils';
 
 const user = {
     email: "ghost-author@example.com",
@@ -15,17 +16,10 @@ describe('Escenario de prueba 7', function () {
     })
     it('Loguearse, crear una página sin publicarla, salir del admin, y revisar que no está publicada', function () {
         // Login
-        cy.get('input[name="identification"]').type(user.email)
-        cy.get('input[name="password"]').type(user.password)
-        cy.get('button[type="submit"]').click()
-        cy.wait(1000)
+        utils.autenticar(user)
 
         // Crear página sin publicar
-        cy.get('li').contains("Pages").first().click()
-        cy.get('a').contains("New page").click()
-        cy.get('textarea[placeholder="Page Title"]').type(`Escenario de prueba 7 - ${id}`)
-        cy.get('div[class="koenig-editor__editor __mobiledoc-editor __has-no-content"]').type("Este es un test para el escenario de prueba 7")
-        cy.wait(1000)
+        utils.crearPagina(`Escenario de prueba 7 - ${id}`, "Este es un test para el escenario de prueba 7")
 
         // Verificar que la página no está publicada
         cy.get('button[class="post-settings"]').click()

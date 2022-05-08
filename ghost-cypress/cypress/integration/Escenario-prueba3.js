@@ -1,4 +1,5 @@
 import { faker } from '@faker-js/faker';
+import { utils } from '../plugins/utils';
 
 const user = {
     email: "ghost-author@example.com",
@@ -15,16 +16,10 @@ describe('Escenario de prueba 3', function () {
     })
     it('Loguearse, crear post sin publicarlo, salir del admin, y revisar que no está publicado el post', function () {
         // Login
-        cy.get('input[name="identification"]').type(user.email)
-        cy.get('input[name="password"]').type(user.password)
-        cy.get('button[type="submit"]').click()
-        cy.wait(1000)
+        utils.autenticar(user)
 
         // Crear post sin publicar
-        cy.get('a[title="New post"]').click()
-        cy.get('textarea[placeholder="Post Title"]').type(`Escenario de prueba 3 - ${id}`)
-        cy.get('div[class="koenig-editor__editor __mobiledoc-editor __has-no-content"]').type("Este es un test para el escenario de prueba 3")
-        cy.wait(1000)
+        utils.crearPost(`Escenario de prueba 3 - ${id}`, "Este es un test para el escenario de prueba 3")
 
         // Verificar que el post no está publicado
         cy.get('button[class="post-settings"]').click()

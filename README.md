@@ -28,7 +28,7 @@
 3. Ejecutar el comando npm install
 4. Pararse en la carpeta ghost (salir un nivel de directorio)
 5. Ejecutar el comando ghost start
-6. Al levantar la app le debe salir el puerto en el cual se levantó, "http://localhost:2370", si no coincide, cambie el puerto en el archivo cypress.env.json para que las pruebas de cypress se ejecuten correctamente
+6. Al levantar la app le debe salir el puerto en el cual se levantó, "http://localhost:2368", si no coincide, cambie el puerto en el archivo cypress.env.json para que las pruebas de cypress se ejecuten correctamente
 
 #### Ejecutar pruebas Cypress 🚀
 1. Entrar al directorio ghost-cypress

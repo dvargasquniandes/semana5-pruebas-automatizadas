@@ -1,4 +1,5 @@
 import { faker } from '@faker-js/faker';
+import { utils } from '../plugins/utils';
 
 const user = {
     email: "ghost-author@example.com",
@@ -15,18 +16,11 @@ describe('Escenario de prueba 2', function () {
     })
     it('Loguearse, editar post, salir del admin y revisar que esté editado', function () {
         // Login
-        cy.get('input[name="identification"]').type(user.email)
-        cy.get('input[name="password"]').type(user.password)
-        cy.get('button[type="submit"]').click()
-        cy.wait(1000)
+        utils.autenticar(user)
 
         // Editar post
-        cy.get('li').contains("Posts").first().click()
-        cy.get('li[class="gh-list-row gh-posts-list-item"]').first().click()
-        cy.get('textarea[placeholder="Post Title"]').clear().type(`Post editado - ${id}`)
-        cy.get('div[class="gh-publishmenu ember-view"]').click()
-        cy.get('button[class="gh-btn gh-btn-blue gh-publishmenu-button gh-btn-icon ember-view"]').click()
-        cy.wait(1000)
+        utils.editarPost(`Post editado - ${id}`)
+        utils.publicarPost()
 
         // Verificar post editado
         cy.get('button[class="post-settings"]').click()
