@@ -1,7 +1,7 @@
 # Integrantes
 1. David Esteban Vargas Quevedo - d.vargasq@uniandes.edu.co
 2. Oscar Fernando Alvarez - o.alvareze@uniandes.edu.co
-
+3. Javier Orlando Estupiñan Olascuaga - j.estupinano@uniandes.edu.co
 # Funcionalidades bajo pruebas
 1. Hacer login
 2. Crear un post
