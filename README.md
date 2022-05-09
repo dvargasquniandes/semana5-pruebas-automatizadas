@@ -1,5 +1,7 @@
 # Integrantes
 1. David Esteban Vargas Quevedo - d.vargasq@uniandes.edu.co
+2. Oscar Fernando Alvarez - o.alvareze@uniandes.edu.co
+
 # Funcionalidades bajo pruebas
 1. Hacer login
 2. Crear un post
@@ -9,6 +11,9 @@
 6. Crear tag
 7. Editar tag
 8. Eliminar tag
+9. Crear un miembro
+10. Crear un elemento de navegación
+11. Modificar header y footer de code injection
 
 # Escenarios de prueba
 1. Loguearse, crear post, salir del admin, y revisar que esté el post 
@@ -21,8 +26,11 @@
 8. Loguearse, crear una página, eliminarla, salir del admin, y revisar que no esté la página 
 9. Loguearse, crear nuevo usuario, salir y loguearse con el nuevo usuario 
 10. Loguearse, crear tag, entrar a un post y relacionar el tag con el post 
-11. Loguearse, editar tag, entrar a un post y relacionar el tag con el post 
-12. Loguearse, eliminar tag, entrar a un post y ver que se eliminó 
+11. Loguearse, crear tag, modificarlo y ver si la modificación aparece en el listado
+12. Loguearse, crear tag, borrarlo y verificar que no aparezca en el listado
+13. Loguearse, crear nuevo miembro, ir al listado, modificarlo y ver que quede modificado en el listado
+14. Loguearse, crear nuevo menu de navegación primaria, cerrar sesión, ir al home y verificar si el menu existe
+15. Loguearse, Modificar el header en code injection y verificar si aparece en la página
 
 #### Ejecutar Ghost 🚀
 1. Tener instalado Node 12.22.1
@@ -38,3 +46,19 @@
 3. Ejecutar el comando npx cypress open
 4. Se abrirá una ventana con las pruebas a testear
 5. Clickear en la opción run all tests
+
+#### Ejecutar pruebas kraken 🚀
+1. Instalar kraken, siguiendo las instrucciones en https://thesoftwaredesignlab.github.io/AutTesingCodelabs/w5/krakenWeb/index.html
+2. si se presentan problemas con las librerías globales, es mejor instalar kraken en el directorio local
+3. Si se requiere, instalar los paquetes appium (node install -g appium), adb (sudo apt install adb), cucumber (npm install -S cucumber), y chromium (sudo apt install chromium-browser), Tenga en cuenta que estas recomendaciones son para una instalación fresca de Ubuntu 22.04LTS
+4. Sobre la raíz del proyecto de kraken, correr kraken con el comando
+kraken-node run --properties=./properties.json
+
+Si la instalación se realizó localmente, usar 
+
+/node_modules/kraken-node/bin/kraken-node run --properties=./properties.json
+5. Dependiendo de la instalación local de ghost, deberá cambiar el usaurio y contraseña en el archivo properties.json, se asume siempre que el despliegue de ghost es local por el puerto estándar, por lo que no se tiene una variable de configuración para la url ya que los tiempos de espera estan ligados a ejecución en localhost
+
+El resultado de la ejecución de las pruebas de Kraken está en /kraken/reports
+ 
+

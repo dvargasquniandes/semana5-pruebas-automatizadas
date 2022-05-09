@@ -70,6 +70,52 @@ function publicarPagina() {
     cy.wait(1000)
 }
 
+function crearTagNuevo(nombre, slug, color, descripcion) {
+    cy.get('a[href="#/tags/"]:first').click();
+    cy.wait(1000);
+    cy.get('a[href="#/tags/new/"]').click();
+    cy.get('#tag-name').type(nombre,{force: true});
+    cy.get('[name="accent-color"]:first').type(color,{force: true});
+    cy.wait(1000);
+    cy.get('#tag-description').type(descripcion,{force: true});
+    cy.get('button.gh-btn-primary').click({force: true});
+    cy.wait(1000);
+}
+
+function modificarTag(slug, nuevoNombre) {
+    cy.get('a[href="#/tags/"]:first').click();
+    cy.wait(1000);
+    cy.get('a[href="#/tags/' + slug + '/"]:first').click()
+    cy.wait(1000);
+    cy.get('#tag-name').clear();
+    cy.get('#tag-name').type(nuevoNombre,{force: true});
+    cy.get('button.gh-btn-primary').click();
+    cy.wait(1000);
+}
+
+function eliminarTag(slug) {
+    cy.get('a[href="#/tags/"]:first').click();
+    cy.wait(1000);
+    cy.get('a[href="#/tags/' + slug + '/"]:first').click()
+    cy.wait(1000);
+    cy.get('button.gh-btn-red').click();
+    cy.wait(500);
+    cy.get('.modal-footer>button.gh-btn-red').click();
+    cy.wait(1000);
+}
+
+function crearNuevoMiembro(nombre, correo) {
+    cy.get('a[href="#/members/"]:first').click();
+    cy.wait(1000);
+    cy.get('a[href="#/members/new/"]:first').click();
+    cy.wait(500);
+    cy.get('#member-name').type(nombre,{force: true});
+    cy.get('#member-email').type(correo,{force: true});
+    cy.wait(1000);
+    cy.get('button.gh-btn-primary').click({force: true});
+    cy.wait(1000);
+}
+
 export const utils = {
     autenticar,
     crearPagina,
@@ -81,4 +127,8 @@ export const utils = {
     eliminarPost,
     publicarPagina,
     publicarPost,
+    crearTagNuevo,
+    modificarTag,
+    eliminarTag,
+    crearNuevoMiembro,
 }
