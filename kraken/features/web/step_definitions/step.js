@@ -134,3 +134,161 @@ Then('Verifico si el el tag de rastreo en el header con la clase {string} y otro
 	expect(elements.length).to.equal(1);
 });
 
+// Javier Steps
+
+When('I login the application using {kraken-string} as user, and password {kraken-string}', async function (user, pass) {
+    let username = await this.driver.$('input[name="identification"]');
+    await username.setValue(user);
+    let password = await this.driver.$('input[name="password"]');
+    await password.setValue(pass);
+    let sumitButton = await this.driver.$('button[type="submit"]');
+    return await sumitButton.click();
+});
+
+When('I go to create a new post', async function () {
+    let link = await this.driver.$('a[href="#/editor/post/"]');
+    return await link.click();
+});
+
+When('I go to create a new page', async function () {
+    let linkPages = await this.driver.$('a[href="#/pages/"]');
+    await  linkPages.click();
+    let link = await this.driver.$('a[href="#/editor/page/"]');
+    return await link.click();
+});
+
+When('I go to create a new member', async function () {
+    let linkPages = await this.driver.$('a[href="#/members/"]');
+    await  linkPages.click();
+    let link = await this.driver.$('a[href="#/members/new/"]');
+    return await link.click();
+});
+
+When('I go to create a new tag', async function () {
+    let linkPages = await this.driver.$('a[href="#/tags/"]');
+    await  linkPages.click();
+    let link = await this.driver.$('a[href="#/tags/new/"]');
+    return await link.click();
+});
+
+When('I create a new post with title {string} and content {string}', async function (title, content) {
+    let textarea = await this.driver.$('textarea[placeholder="Post title"]');
+    await textarea.setValue(title);
+    let parrafo = await this.driver.$('div[data-placeholder="Begin writing your post..."]');
+    await parrafo.addValue(content);
+    let publish = await this.driver.$('.gh-publishmenu');
+    await publish.click();
+    let publishButton = await this.driver.$('button[class="gh-btn gh-btn-black gh-publishmenu-button gh-btn-icon ember-view"]');
+    await publishButton.click();
+    let publishButtonFinal = await this.driver.$('button[class="gh-btn gh-btn-black gh-btn-icon ember-view"]');
+    await publishButtonFinal.click();
+    let closeMessage = await this.driver.$('.gh-notification-close');
+    await closeMessage.click();
+});
+
+When('I create a new page with title {string} and content {string}', async function (title, content) {
+    let textarea = await this.driver.$('textarea[placeholder="Page title"]');
+    await textarea.setValue(title);
+    let parrafo = await this.driver.$('div[data-placeholder="Begin writing your page..."]');
+    await parrafo.addValue(content);
+    let publish = await this.driver.$('.gh-publishmenu');
+    await publish.click();
+    let publishButton = await this.driver.$('button[class="gh-btn gh-btn-black gh-publishmenu-button gh-btn-icon ember-view"]');
+    await publishButton.click();
+    let closeMessage = await this.driver.$('.gh-notification-close');
+    await closeMessage.click();
+});
+
+When('I create a new tag with name {string}', async function (name) {
+    let tagName = await this.driver.$('input[id="tag-name"]');
+    await tagName.setValue(name);
+    let publishButton = await this.driver.$('button[class="gh-btn gh-btn-primary gh-btn-icon ember-view"]');
+    return await publishButton.click();
+});
+
+When('I edit post with title {string} and content {string}', async function (title, content) {
+    let textarea = await this.driver.$('textarea[placeholder="Post title"]');
+    await textarea.setValue(title);
+    let parrafo = await this.driver.$('div[data-placeholder="Begin writing your post..."]');
+    await parrafo.setValue(content);
+    let update = await this.driver.$('.gh-publishmenu');
+    await update.click();
+    let updateButton = await this.driver.$('button[class="gh-btn gh-btn-black gh-publishmenu-button gh-btn-icon ember-view"]');
+    await updateButton.click();
+    let closeMessage = await this.driver.$('.gh-notification-close');
+    await closeMessage.click();
+});
+
+When('I edit page with title {string} and content {string}', async function (title, content) {
+    let textarea = await this.driver.$('textarea[placeholder="Page title"]');
+    await textarea.setValue(title);
+    let parrafo = await this.driver.$('div[data-placeholder="Begin writing your page..."]');
+    await parrafo.setValue(content);
+    let update = await this.driver.$('.gh-publishmenu');
+    await update.click();
+    let updateButton = await this.driver.$('button[class="gh-btn gh-btn-black gh-publishmenu-button gh-btn-icon ember-view"]');
+    await updateButton.click();
+    let closeMessage = await this.driver.$('.gh-notification-close');
+    await closeMessage.click();
+});
+
+When('I create a new post with title {string} and content {string} wihtout saving', async function (title, content) {
+    let textarea = await this.driver.$('textarea[placeholder="Post title"]');
+    await textarea.setValue(title);
+    let parrafo = await this.driver.$('div[data-placeholder="Begin writing your post..."]');
+    await parrafo.addValue(content);
+});
+
+When('I create a new page with title {string} and content {string} wihtout saving', async function (title, content) {
+    let textarea = await this.driver.$('textarea[placeholder="Page title"]');
+    await textarea.setValue(title);
+    let parrafo = await this.driver.$('div[data-placeholder="Begin writing your page..."]');
+    await parrafo.addValue(content);
+});
+
+When('I go to the new page created', async function () {
+    let settingsD = await this.driver.$('button[title="Settings"]');
+    await settingsD.click();
+    let linkPost = await this.driver.$('a[class="post-view-link"]');
+    await this.driver.url(await linkPost.getAttribute('href'));
+});
+
+When('I delete the page and validate page', async function () {
+    let settingsD = await this.driver.$('button[title="Settings"]');
+    await settingsD.click();
+    await new Promise(r=> setTimeout(r, 300));
+    let linkPost = await this.driver.$('a[class="post-view-link"]');
+    let textLink = await linkPost.getAttribute('href');
+    let buttomDelete = await this.driver.$('button[class="gh-btn gh-btn-hover-red gh-btn-icon settings-menu-delete-button"]');
+    buttomDelete.click();
+    await new Promise(r=> setTimeout(r, 300));
+    let confirmDelete =  await this.driver.$('button[class="gh-btn gh-btn-red gh-btn-icon ember-view"]');
+    confirmDelete.click();
+    await new Promise(r=> setTimeout(r, 300));
+    await this.driver.url(await textLink);
+});
+
+When('I go to the preview page', async function () {
+    let settingsD = await this.driver.$('button[title="Settings"]');
+    await settingsD.click();
+    let textLink =  await this.driver.$('p[class="ghost-url-preview description ember-view"]').getHTML(false);
+    await new Promise(r=> setTimeout(r, 300));
+    await this.driver.newWindow('http://' + textLink, {
+        windowName: 'name post',
+        windowFeature: 'width=420,height=230,resizable,scrollbars=yes,status=1',
+    });
+});
+
+When('I go to the preview tag page', async function () {
+    let textLink =  await this.driver.$('p[class="ghost-url-preview description ember-view"]').getHTML(false);
+    await new Promise(r=> setTimeout(r, 300));
+    await this.driver.newWindow('http://' + textLink, {
+        windowName: 'name post',
+        windowFeature: 'width=420,height=230,resizable,scrollbars=yes,status=1',
+    });
+});
+
+Then('I evaluate the title of the post {string}', async function (title) {
+    let tituloPagina = await this.driver.$('h1').getHTML(false);
+    expect(title).to.equal(tituloPagina);
+});
