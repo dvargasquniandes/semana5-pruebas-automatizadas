@@ -48,7 +48,7 @@ When('Agrego un tag con el nombre {string}, el slug {string}, el color {string} 
 	await element.setValue(color);
 	element = await this.driver.$('#tag-description');
 	await element.setValue(descripcion);
-	element = await this.driver.$('button.gh-btn-primary');
+	element = await this.driver.$('section.view-actions>button.gh-btn');
 	return await element.click();
 	
 });
@@ -58,7 +58,7 @@ When('Edito el tag con el slug {string} y cambio el nombre a {string}', async fu
 	await element.click();
 	element = await this.driver.$('#tag-name');
 	await element.setValue(nuevoNombre);
-	element = await this.driver.$('button.gh-btn-primary');
+	element = await this.driver.$('section.view-actions>button.gh-btn');
 	return await element.click();
 });
 
