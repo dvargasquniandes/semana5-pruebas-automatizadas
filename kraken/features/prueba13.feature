@@ -2,7 +2,7 @@ Feature: Administrar Miembros
 
 @user1 @web
 Scenario: Loguearse, crear nuevo miembro, ir al listado, modificarlo y ver que quede modificado en el listado
-  Given I navigate to page "http://localhost:2368/ghost"
+  Given I navigate to page "<LOGIN>"
   And I wait for 2 seconds
   When Inicio sesión con usuario "<USERNAME1>" y clave "<PASSWORD1>"
     And I wait for 2 seconds

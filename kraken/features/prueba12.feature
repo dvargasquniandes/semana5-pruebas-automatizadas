@@ -2,7 +2,7 @@ Feature: Administración de TAGs
 
 @user1 @web
 Scenario: Loguearse, crear tag, borrarlo y verificar que no aparezca en el listado
-  Given I navigate to page "http://localhost:2368/ghost"
+  Given I navigate to page "<LOGIN>"
   And I wait for 2 seconds
   When Inicio sesión con usuario "<USERNAME1>" y clave "<PASSWORD1>"
     And I wait for 2 seconds

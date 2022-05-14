@@ -1,6 +1,7 @@
 {
-	"URL": "http://localhost:2368/",
-    "LOGIN": "http://localhost:2368/ghost/#/signin",
+	"URL": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/",
+    "LOGIN": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/ghost/#/signin",
+	"ABOUT": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/about/",
 	"USERNAME1":"o.alvareze@uniandes.edu.co",
 	"PASSWORD1": "123123123123"
 }
