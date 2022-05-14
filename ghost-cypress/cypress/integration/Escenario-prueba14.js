@@ -10,23 +10,23 @@ const user = {
 const id = faker.datatype.uuid();
 const url = Cypress.env('url_base');
 
-describe('Escenario de prueba 13', function () {
+describe('Escenario de prueba 14', function () {
     before(function () {
         cy.visit(`${url}/ghost/`);
         cy.clearCookies();
     })
-    it('Loguearse, crear nuevo miembro, ir al listado, modificarlo y ver que quede modificado en el listado', function () {
+    it('Loguearse, crear nuevo menu de navegación primaria, cerrar sesión, ir al home y verificar si el menu existe', function () {
         // Login
         utils.autenticar(user)
 
         // Crear miembro
-        utils.crearNuevoMiembro('Prueba Miembro','test@test.com','336699','prueba')
+        utils.crearNuevoEnlaceNavegacion('Prueba Enlace','http://prueba.com')
 
 
         // Verificar miembro creado
-	cy.get('a[href="#/members/"]:first').click();
-    	cy.wait(1000);
-        cy.get('p.gh-members-list-email').contains("test@test.com").should("exist")
+        cy.visit(`${url}/about/`);
+        cy.wait(1000);
+        cy.get('a[href="http://prueba.com"]').should("exist")
     })
 })
 

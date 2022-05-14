@@ -2,8 +2,8 @@ import { faker } from '@faker-js/faker';
 import { utils } from '../plugins/utils';
 
 const user = {
-    email: "o.alvareze@uniandes.edu.co",
-    password: "123123123123",
+    email: Cypress.env('ghost_user'),
+    password: Cypress.env('ghost_password'),
 };
 
 const id = faker.datatype.uuid();
