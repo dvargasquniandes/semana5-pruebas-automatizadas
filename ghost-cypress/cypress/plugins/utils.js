@@ -96,7 +96,7 @@ function crearTagNuevo(nombre, slug, color, descripcion) {
     cy.get('[name="accent-color"]:first').type(color,{force: true});
     cy.wait(1000);
     cy.get('#tag-description').type(descripcion,{force: true});
-    cy.get('button.gh-btn-primary').click({force: true});
+    cy.get('section.view-actions>button.gh-btn').click({force: true});
     cy.wait(1000);
 }
 
@@ -107,7 +107,7 @@ function modificarTag(slug, nuevoNombre) {
     cy.wait(1000);
     cy.get('#tag-name').clear();
     cy.get('#tag-name').type(nuevoNombre,{force: true});
-    cy.get('button.gh-btn-primary').click();
+    cy.get('section.view-actions>button.gh-btn').click({force: true});
     cy.wait(1000);
 }
 
@@ -130,7 +130,7 @@ function crearNuevoMiembro(nombre, correo) {
     cy.get('#member-name').type(nombre,{force: true});
     cy.get('#member-email').type(correo,{force: true});
     cy.wait(1000);
-    cy.get('button.gh-btn-primary').click({force: true});
+    cy.get('section.view-actions>button.gh-btn').click({force: true});
     cy.wait(1000);
 }
 
@@ -142,7 +142,7 @@ function crearNuevoEnlaceNavegacion(nombre, urlEnlace) {
     cy.get('#settings-navigation>div.gh-blognav-item>div>span.gh-blognav-label>input').type(nombre,{force: true});
     cy.get('#settings-navigation>div.gh-blognav-item>div>span.gh-blognav-url>input').clear({force: true}).type(urlEnlace,{force: true});
     cy.wait(1000);
-    cy.get('button.gh-btn-primary').click({force: true});
+    cy.get('section.view-actions>button.gh-btn').click({force: true});
     cy.wait(1000);
 }
 
@@ -155,7 +155,7 @@ function modificarCodeInjection(header, footer) {
     cy.get('#ghost-head>div>div>textarea').clear({force: true}).type('<hr class="' + header + '"></hr>',{force: true});
     cy.get('#ghost-foot>div>div>textarea').clear({force: true}).type('<hr class="' + footer + '"></hr>',{force: true});
     cy.wait(1000);
-    cy.get('button.gh-btn-primary').click({force: true});
+    cy.get('section.view-actions>button.gh-btn').click({force: true});
     cy.wait(1000);
 }
 
