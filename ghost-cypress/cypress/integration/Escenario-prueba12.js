@@ -16,19 +16,25 @@ describe('Escenario de prueba 11', function () {
         cy.clearCookies();
     })
     it('Loguearse, crear tag, modificarlo y ver si la modificación aparece en el listado', function () {
+        let indiceImagen = 0;
         // Login
         utils.autenticar(user)
+        cy.screenshot("imagen_" + (indiceImagen++))
 
         // Crear tag
         utils.crearTagNuevo('Prueba Eliminar','prueba-eliminar','336699','prueba')
+        cy.screenshot("imagen_" + (indiceImagen++))
 
         // Modificar tag
         utils.eliminarTag('prueba-eliminar')
+        cy.screenshot("imagen_" + (indiceImagen++))
 
         // Verificar tag creado
-	cy.get('a[href="#/tags/"]:first').click();
-	cy.wait(1000);
+        cy.get('a[href="#/tags/"]:first').click();
+        cy.wait(1000);
+        cy.screenshot("imagen_" + (indiceImagen++))
         cy.get('a[href="#/tags/prueba-eliminar/"]').should("not.exist")
+        cy.screenshot("imagen_" + (indiceImagen++))
     })
 })
 

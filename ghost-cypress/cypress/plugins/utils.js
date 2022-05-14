@@ -2,7 +2,7 @@ function autenticar(user) {
     cy.get('input[name="identification"]').type(user.email)
     cy.get('input[name="password"]').type(user.password)
     cy.get('button[type="submit"]').click()
-    cy.wait(1000)
+    cy.wait(2000)
 }
 
 function crearPost(nombre, descripcion) {

@@ -11,8 +11,8 @@ And Voy a la opción de administrar configuración
 And Voy a la opción de administrar code injection
     And I wait for 1 seconds
     And Agrego un tag de rastreo en el header con la clase "code-injection-header" y otro en el footer con la clase "code-injection-footer"
-    And I wait for 1 seconds
+    And I wait for 2 seconds
     And I navigate to page "<ABOUT>"
-    And I wait for 1 seconds
+    And I wait for 3 seconds
   Then Verifico si el el tag de rastreo en el header con la clase "code-injection-header" y otro en el footer con la clase "code-injection-footer" existen
 

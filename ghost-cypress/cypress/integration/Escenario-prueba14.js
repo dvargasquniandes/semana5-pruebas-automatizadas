@@ -16,17 +16,22 @@ describe('Escenario de prueba 14', function () {
         cy.clearCookies();
     })
     it('Loguearse, crear nuevo menu de navegación primaria, cerrar sesión, ir al home y verificar si el menu existe', function () {
+        let indiceImagen = 0;
         // Login
         utils.autenticar(user)
+        cy.screenshot("imagen_" + (indiceImagen++))
 
         // Crear miembro
         utils.crearNuevoEnlaceNavegacion('Prueba Enlace','http://prueba.com')
+        cy.screenshot("imagen_" + (indiceImagen++))
 
 
         // Verificar miembro creado
         cy.visit(`${url}/about/`);
         cy.wait(1000);
+        cy.screenshot("imagen_" + (indiceImagen++))
         cy.get('a[href="http://prueba.com"]').should("exist")
+        cy.screenshot("imagen_" + (indiceImagen++))
     })
 })
 

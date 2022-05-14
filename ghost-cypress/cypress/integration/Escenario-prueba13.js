@@ -16,17 +16,22 @@ describe('Escenario de prueba 13', function () {
         cy.clearCookies();
     })
     it('Loguearse, crear nuevo miembro, ir al listado, modificarlo y ver que quede modificado en el listado', function () {
+        let indiceImagen = 0;
         // Login
         utils.autenticar(user)
+        cy.screenshot("imagen_" + (indiceImagen++))
 
         // Crear miembro
         utils.crearNuevoMiembro('Prueba Miembro','test@test.com','336699','prueba')
+        cy.screenshot("imagen_" + (indiceImagen++))
 
 
         // Verificar miembro creado
-	cy.get('a[href="#/members/"]:first').click();
+	    cy.get('a[href="#/members/"]:first').click();
     	cy.wait(1000);
+        cy.screenshot("imagen_" + (indiceImagen++))
         cy.get('p.gh-members-list-email').contains("test@test.com").should("exist")
+        cy.screenshot("imagen_" + (indiceImagen++))
     })
 })
 
