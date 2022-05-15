@@ -16,21 +16,27 @@ describe('Escenario de prueba 5', function () {
         cy.clearCookies();
     })
     it('Loguearse, crear una página, salir del admin, y revisar que esté la página', function () {
+        let indiceImagen = 0;
         // Login
         utils.autenticar(user)
+        cy.screenshot("imagen_" + (indiceImagen++))
 
         // Crear página
         utils.crearPagina(`Escenario de prueba 5 - ${id}`, "Este es un test para el escenario de prueba 5");
+        cy.screenshot("imagen_" + (indiceImagen++))
         utils.publicarPagina()
+        cy.screenshot("imagen_" + (indiceImagen++))
 
         // Verificar página creada
-        cy.get('button[class="post-settings"]').click()
+        cy.get('button[title="Settings"]').click()
+        cy.screenshot("imagen_" + (indiceImagen++))
         cy.get('input[name="post-setting-slug"]')
             .invoke('val')
             .then(sometext => {
                 cy.visit(`${url}/${sometext}`)
-                cy.get(".post-full-title").should("have.text", `Escenario de prueba 5 - ${id}`)
+                cy.get("h1").should("have.text", `Escenario de prueba 5 - ${id}`)
             });
+            cy.screenshot("imagen_" + (indiceImagen++))
     })
 })
 

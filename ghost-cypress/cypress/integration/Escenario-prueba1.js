@@ -15,21 +15,27 @@ describe('Escenario de prueba 1', function () {
         cy.clearCookies();
     })
     it('Loguearse, crear post, salir del admin, y revisar que esté el post', function () {
+        let indiceImagen = 0;
         // Login
         utils.autenticar(user)
+        cy.screenshot("imagen_" + (indiceImagen++))
 
         // Crear post
         utils.crearPost(`Escenario de prueba 1 - ${id}`, "Este es un test para el escenario de prueba 1")
+        cy.screenshot("imagen_" + (indiceImagen++))
         utils.publicarPost()
+        cy.screenshot("imagen_" + (indiceImagen++))
 
         // Verificar post creado
-        cy.get('button[class="post-settings"]').click()
+        cy.get('button[title="Settings"]').click()
+        cy.screenshot("imagen_" + (indiceImagen++))
         cy.get('input[name="post-setting-slug"]')
             .invoke('val')
             .then(sometext => {
                 cy.visit(`${url}/${sometext}`)
-                cy.get(".post-full-title").should("have.text", `Escenario de prueba 1 - ${id}`)
+                cy.get("h1").should("have.text", `Escenario de prueba 1 - ${id}`)
             });
+        cy.screenshot("imagen_" + (indiceImagen++))
     })
 })
 

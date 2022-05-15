@@ -16,18 +16,24 @@ describe('Escenario de prueba 4', function () {
         cy.clearCookies();
     })
     it('Loguearse, crear post, eliminar post, salir del admin, y revisar que no esté el post', function () {
+        let indiceImagen = 0;
         // Login
         utils.autenticar(user)
+        cy.screenshot("imagen_" + (indiceImagen++))
 
         // Crear post
         utils.crearPost(`Escenario de prueba 4 - ${id}`, "Este es un test para el escenario de prueba 4")
+        cy.screenshot("imagen_" + (indiceImagen++))
         utils.publicarPost()
+        cy.screenshot("imagen_" + (indiceImagen++))
 
         // Eliminar post
         utils.eliminarPost()
+        cy.screenshot("imagen_" + (indiceImagen++))
 
         // Verificar que el post no está en el listado de posts
         cy.get('li[class="gh-list-row gh-posts-list-item"]').contains(`Escenario de prueba 4 - ${id}`).should("not.exist")
+        cy.screenshot("imagen_" + (indiceImagen++))
     })
 })
 

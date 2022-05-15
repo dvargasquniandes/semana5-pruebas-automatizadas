@@ -8,7 +8,7 @@ function autenticar(user) {
 function crearPost(nombre, descripcion) {
     cy.get('a[title="New post"]').click()
     cy.wait(1000);
-    cy.get('textarea[placeholder="Post title"]').type(nombre)
+    cy.get('textarea[class="gh-editor-title ember-text-area gh-input ember-view"]').type(nombre)
     cy.get('div[class="koenig-editor__editor __mobiledoc-editor __has-no-content"]').type(descripcion)
     cy.wait(1000)
 }
@@ -18,12 +18,12 @@ function editarPost(nombre) {
     cy.wait(1000);
     cy.get('li[class="gh-list-row gh-posts-list-item"]').first().click()
     cy.wait(1000);
-    cy.get('textarea[placeholder="Post Title"]').clear().type(nombre)
+    cy.get('textarea[class="gh-editor-title ember-text-area gh-input ember-view"]').clear().type(nombre)
     cy.wait(1000)
 }
 
 function eliminarPost() {
-    cy.get('button[class="post-settings"]').click()
+    cy.get('button[title="Settings"]').click()
     cy.wait(1000);
     cy.get('button[class="gh-btn gh-btn-hover-red gh-btn-icon settings-menu-delete-button"]').click()
     cy.wait(1000);
@@ -34,7 +34,12 @@ function eliminarPost() {
 function publicarPost() {
     cy.get('div[class="gh-publishmenu ember-view"]').click()
     cy.wait(1000);
-    cy.get('button[class="gh-btn gh-btn-blue gh-publishmenu-button gh-btn-icon ember-view"]').click()
+    cy.get('button').contains("Publish").click()
+    cy.get('body').then((body) => {
+        if (body.find('gh-btn:contains("Publish")')) {
+            cy.get('button').contains("Publish").click()
+        }
+    })
     cy.wait(1000)
 }
 
@@ -43,7 +48,7 @@ function crearPagina(nombre, descripcion) {
     cy.wait(1000);
     cy.get('a').contains("New page").click()
     cy.wait(1000);
-    cy.get('textarea[placeholder="Page Title"]').type(nombre)
+    cy.get('textarea[class="gh-editor-title ember-text-area gh-input ember-view"]').type(nombre)
     cy.get('div[class="koenig-editor__editor __mobiledoc-editor __has-no-content"]').type(descripcion)
     cy.wait(1000)
 }
@@ -64,15 +69,15 @@ function editarPagina(nombre) {
     cy.wait(1000);
     cy.get('li[class="gh-list-row gh-posts-list-item"]').first().click()
     cy.wait(1000);
-    cy.get('textarea[placeholder="Page Title"]').clear().type(nombre)
+    cy.get('textarea[class="gh-editor-title ember-text-area gh-input ember-view"]').clear().type(nombre)
     cy.get('div[class="gh-publishmenu ember-view"]').click()
     cy.wait(1000);
-    cy.get('button[class="gh-btn gh-btn-blue gh-publishmenu-button gh-btn-icon ember-view"]').click()
+    cy.get('button').contains("Publish").click()
     cy.wait(1000)
 }
 
 function eliminarPagina() {
-    cy.get('button[class="post-settings"]').click()
+    cy.get('button[title="Settings"]').click()
     cy.wait(1000);
     cy.get('button[class="gh-btn gh-btn-hover-red gh-btn-icon settings-menu-delete-button"]').click()
     cy.wait(1000);
@@ -83,7 +88,7 @@ function eliminarPagina() {
 function publicarPagina() {
     cy.get('div[class="gh-publishmenu ember-view"]').click()
     cy.wait(1000);
-    cy.get('button[class="gh-btn gh-btn-blue gh-publishmenu-button gh-btn-icon ember-view"]').click()
+    cy.get('button').contains("Publish").click()
     cy.wait(1000)
 }
 

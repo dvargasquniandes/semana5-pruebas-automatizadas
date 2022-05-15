@@ -16,15 +16,21 @@ describe('Escenario de prueba 10', function () {
         cy.clearCookies();
     })
     it('Loguearse, crear tag', function () {
+        let indiceImagen = 0;
         // Login
         utils.autenticar(user)
+        cy.screenshot("imagen_" + (indiceImagen++))
 
         // Crear tag
         utils.crearTag(`Tag - ${id}`, faker.lorem.paragraph())
+        cy.screenshot("imagen_" + (indiceImagen++))
 
         // Verificar que el tag se creó
         cy.get('li').contains("Tags").first().click()
-        cy.get('li[class="gh-list-row gh-tags-list-item ember-view"]').contains(`Tag - ${id}`).should("exist")
+        cy.screenshot("imagen_" + (indiceImagen++))
+        cy.wait(1000)
+        cy.get('.gh-list-row.gh-tags-list-item').contains(`Tag - ${id}`).should("exist")
+        cy.screenshot("imagen_" + (indiceImagen++))
     })
 })
 

@@ -16,21 +16,27 @@ describe('Escenario de prueba 2', function () {
         cy.clearCookies();
     })
     it('Loguearse, editar post, salir del admin y revisar que esté editado', function () {
+        let indiceImagen = 0;
         // Login
         utils.autenticar(user)
+        cy.screenshot("imagen_" + (indiceImagen++))
 
         // Editar post
         utils.editarPost(`Post editado - ${id}`)
+        cy.screenshot("imagen_" + (indiceImagen++))
         utils.publicarPost()
+        cy.screenshot("imagen_" + (indiceImagen++))
 
         // Verificar post editado
-        cy.get('button[class="post-settings"]').click()
+        cy.get('button[title="Settings"]').click()
+        cy.screenshot("imagen_" + (indiceImagen++))
         cy.get('input[name="post-setting-slug"]')
             .invoke('val')
             .then(sometext => {
                 cy.visit(`${url}/${sometext}`)
-                cy.get(".post-full-title").should("have.text", `Post editado - ${id}`)
+                cy.get("h1").should("have.text", `Post editado - ${id}`)
             });
+            cy.screenshot("imagen_" + (indiceImagen++))
     })
 })
 
