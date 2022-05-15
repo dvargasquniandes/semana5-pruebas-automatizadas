@@ -9,6 +9,7 @@ const user = {
 
 const id = faker.datatype.uuid();
 const url = Cypress.env('url_base');
+const ghostVersion = Cypress.env('ghost_version');
 
 describe('Escenario de prueba 9', function () {
     before(function () {
@@ -19,35 +20,35 @@ describe('Escenario de prueba 9', function () {
         let indiceImagen = 0;
         // Login
         utils.autenticar(user)
-        cy.screenshot("imagen_" + (indiceImagen++))
+        cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
 
         // Editar usuario
         cy.get('.gh-nav').then(($nav) => {
             const condition = Boolean($nav.find('a[class="gh-nav-bottom-tabicon"]').length);
             if (condition) {
                 cy.get('a[class="ember-view gh-nav-bottom-tabicon"]').click()
-                cy.screenshot("imagen_" + (indiceImagen++))
+                cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
                 cy.get('a').contains('Staff').click()
-                cy.screenshot("imagen_" + (indiceImagen++))
+                cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
                 cy.get('div[class="apps-grid-cell tooltip-centered"]').first().click()
-                cy.screenshot("imagen_" + (indiceImagen++))
+                cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
                 cy.get('#user-name').clear().type(faker.name.findName(), {force: true})
-                cy.screenshot("imagen_" + (indiceImagen++))
+                cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
                 cy.get('#user-location').clear().type(faker.address.city(), {force: true})
-                cy.screenshot("imagen_" + (indiceImagen++))
+                cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
                 cy.get('button').contains("Save").click()
-                cy.screenshot("imagen_" + (indiceImagen++))
+                cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
             } else {
                 cy.get('.ember-view').contains("Staff").first().click()
-                cy.screenshot("imagen_" + (indiceImagen++))
+                cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
                 cy.get('div[class="apps-grid-cell tooltip-centered"]').first().click()
-                cy.screenshot("imagen_" + (indiceImagen++))
+                cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
                 cy.get('#user-name').clear().type(faker.name.findName(), {force: true})
-                cy.screenshot("imagen_" + (indiceImagen++))
+                cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
                 cy.get('#user-location').clear().type(faker.address.city(), {force: true})
-                cy.screenshot("imagen_" + (indiceImagen++))
+                cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
                 cy.get('button').contains("Save").click()
-                cy.screenshot("imagen_" + (indiceImagen++))
+                cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
             }
         })
         
