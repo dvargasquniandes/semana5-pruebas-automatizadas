@@ -9,6 +9,7 @@ const user = {
 
 const id = faker.datatype.uuid();
 const url = Cypress.env('url_base');
+const ghostVersion = Cypress.env('ghost_version');
 
 describe('Escenario de prueba 2', function () {
     before(function () {
@@ -19,24 +20,24 @@ describe('Escenario de prueba 2', function () {
         let indiceImagen = 0;
         // Login
         utils.autenticar(user)
-        cy.screenshot("imagen_" + (indiceImagen++))
+        cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
 
         // Editar post
         utils.editarPost(`Post editado - ${id}`)
-        cy.screenshot("imagen_" + (indiceImagen++))
+        cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
         utils.publicarPost()
-        cy.screenshot("imagen_" + (indiceImagen++))
+        cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
 
         // Verificar post editado
         cy.get('button[title="Settings"]').click()
-        cy.screenshot("imagen_" + (indiceImagen++))
+        cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
         cy.get('input[name="post-setting-slug"]')
             .invoke('val')
             .then(sometext => {
                 cy.visit(`${url}/${sometext}`)
                 cy.get("h1").should("have.text", `Post editado - ${id}`)
             });
-            cy.screenshot("imagen_" + (indiceImagen++))
+        cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
     })
 })
 

@@ -9,6 +9,7 @@ const user = {
 
 const id = faker.datatype.uuid();
 const url = Cypress.env('url_base');
+const ghostVersion = Cypress.env('ghost_version');
 
 describe('Escenario de prueba 14', function () {
     before(function () {
@@ -19,19 +20,19 @@ describe('Escenario de prueba 14', function () {
         let indiceImagen = 0;
         // Login
         utils.autenticar(user)
-        cy.screenshot("imagen_" + (indiceImagen++))
+        cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
 
         // Crear miembro
         utils.crearNuevoEnlaceNavegacion('Prueba Enlace','http://prueba.com')
-        cy.screenshot("imagen_" + (indiceImagen++))
+        cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
 
 
         // Verificar miembro creado
         cy.visit(`${url}/about/`);
         cy.wait(1000);
-        cy.screenshot("imagen_" + (indiceImagen++))
+        cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
         cy.get('a[href="http://prueba.com"]').should("exist")
-        cy.screenshot("imagen_" + (indiceImagen++))
+        cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
     })
 })
 
