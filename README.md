@@ -2,6 +2,8 @@
 1. David Esteban Vargas Quevedo - d.vargasq@uniandes.edu.co
 2. Oscar Fernando Alvarez - o.alvareze@uniandes.edu.co
 3. Javier Orlando Estupiñan Olascuaga - j.estupinano@uniandes.edu.co
+4. Andres Martin Cantor Urrego - am.cantor@uniandes.edu.co
+
 # Funcionalidades bajo pruebas
 1. Hacer login
 2. Crear un post
@@ -14,6 +16,10 @@
 9. Crear un miembro
 10. Crear un elemento de navegación
 11. Modificar header y footer de code injection
+12. Modificar diseño del Brand
+13. Modificar diseño de todo el sitio
+14. Modificar diseño de la pagina principal
+15. Modificar diseño del Post
 
 # Escenarios de prueba
 1. Loguearse, crear post, salir del admin, y revisar que esté el post 
@@ -31,6 +37,11 @@
 13. Loguearse, crear nuevo miembro, ir al listado, modificarlo y ver que quede modificado en el listado
 14. Loguearse, crear nuevo menu de navegación primaria, cerrar sesión, ir al home y verificar si el menu existe
 15. Loguearse, Modificar el header en code injection y verificar si aparece en la página
+16. Loguearse, entrar a configuraciones en la seccion Design, entrar a Brand, cambiar el color del boton inferior subscribe a #1afff0, darle guardar, ir a view site y verificar el color del boton inferior Subscribe
+17. Loguearse, entrar a configuraciones en la seccion Design, entrar a Site-wide, cambiar el color scheme a Dark, darle guardar, ir a view site y verificar que la pagina tiene el color scheme dark
+18. Loguearse, entrar a configuraciones en la seccion Design, entrar a Homepage, cambiar el Feed Layout a List, darle guardar, ir a view site y verificar que el Homepage tenga el layout en Lista
+19. Loguearse, entrar a configuraciones en la seccion Design, entrar a Post, cambiar el post email a Bottom of post, darle guardar, ir a view site dar clic sobre la imagen del post de coming soon y verificar que el post contenha el email signup
+20. Loguearse, entrar a configuraciones en la seccion Design, entrar a Post, cambiar el Email signup test a "Prueba cambio", darle guardar, ir a view site dar clic sobre la imagen del post de coming soon y verificar que el post tenga en su email text "Prueba Cambio"
 
 #### Ejecutar Ghost 🚀
 1. Tener instalado Node 12.22.1

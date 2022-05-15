@@ -164,6 +164,76 @@ function modificarCodeInjection(header, footer) {
     cy.wait(1000);
 }
 
+function modificarColorBotonInferior(color) {
+    cy.wait(2000);
+    cy.get('a[href="#/settings/"]:first').click();
+    cy.wait(2000);
+    cy.get('a[href="#/settings/design/"]:first').click();
+    cy.wait(2000);
+    cy.get('button').contains("Brand").click();
+    cy.wait(2000);
+    cy.get('#accent-color').clear({force: true}).type(color, {force: true});
+    cy.wait(2000);
+    cy.get('section.view-actions>button.gh-btn').click({force: true});
+    cy.wait(1000);
+}
+
+function modificarColorSchemeDark() {
+    cy.wait(2000);
+    cy.get('a[href="#/settings/"]:first').click();
+    cy.wait(2000);
+    cy.get('a[href="#/settings/design/"]:first').click();
+    cy.wait(2000);
+    cy.get('button').contains("Site-wide").click();
+    cy.wait(2000);
+    cy.get('select').eq(2).select('Dark');
+    cy.wait(2000);
+    cy.get('section.view-actions>button.gh-btn').click({force: true});
+    cy.wait(1000);
+}
+
+function modificarPublicationFeedLayout() {
+    cy.wait(2000);
+    cy.get('a[href="#/settings/"]:first').click();
+    cy.wait(2000);
+    cy.get('a[href="#/settings/design/"]:first').click();
+    cy.wait(2000);
+    cy.get('button').contains("Homepage").click();
+    cy.wait(2000);
+    cy.get('select').eq(1).select('List');
+    cy.wait(2000);
+    cy.get('section.view-actions>button.gh-btn').click({force: true});
+    cy.wait(1000);
+}
+
+function modificarPostEmailSignUp() {
+    cy.wait(2000);
+    cy.get('a[href="#/settings/"]:first').click();
+    cy.wait(2000);
+    cy.get('a[href="#/settings/design/"]:first').click();
+    cy.wait(2000);
+    cy.get('button').contains("Post").click();
+    cy.wait(2000);
+    cy.get('select').eq(1).select('Bottom of post');
+    cy.wait(2000);
+    cy.get('section.view-actions>button.gh-btn').click({force: true});
+    cy.wait(1000);
+}
+
+function modificarPostEmailText(newText) {
+    cy.wait(2000);
+    cy.get('a[href="#/settings/"]:first').click();
+    cy.wait(2000);
+    cy.get('a[href="#/settings/design/"]:first').click();
+    cy.wait(2000);
+    cy.get('button').contains("Post").click();
+    cy.wait(2000);
+    cy.get('input[name="emailSignupText"]').clear({force: true}).type(newText);
+    cy.wait(8000);
+    cy.get('section.view-actions>button.gh-btn').click({force: true});
+    cy.wait(1000);
+}
+
 export const utils = {
     autenticar,
     crearPagina,
@@ -180,5 +250,10 @@ export const utils = {
     eliminarTag,
     crearNuevoMiembro,
     crearNuevoEnlaceNavegacion,
-    modificarCodeInjection
+    modificarCodeInjection,
+    modificarColorBotonInferior,
+    modificarColorSchemeDark,
+    modificarPublicationFeedLayout,
+    modificarPostEmailSignUp,
+    modificarPostEmailText
 }
