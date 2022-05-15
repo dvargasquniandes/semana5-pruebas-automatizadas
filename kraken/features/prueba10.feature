@@ -1,7 +1,7 @@
 Feature: Escenario Crear nuevo tag sin asociar un post
 
 @user1 @web
-Scenario: Loguearse, crear tag, ir apagina del tag no carga por no tener un post asociado V3
+Scenario: Loguearse, crear tag, ir apagina del tag no carga por no tener un post asociado V4
     Given I navigate to page "<LOGIN>"
     And I wait for 1 seconds
     When I login the application using "<USERNAME1>" as user, and password "<PASSWORD1>"
