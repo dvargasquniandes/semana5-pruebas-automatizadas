@@ -206,18 +206,17 @@ function modificarPublicationFeedLayout() {
     cy.wait(1000);
 }
 
-function modificarPostEmailSignUp() {
+function modificarSiteDescription(descripcion) {
     cy.wait(2000);
     cy.get('a[href="#/settings/"]:first').click();
     cy.wait(2000);
     cy.get('a[href="#/settings/design/"]:first').click();
     cy.wait(2000);
-    cy.get('button').contains("Post").click();
+    cy.get('button').contains("Brand").click();
     cy.wait(2000);
-    cy.get('select').eq(1).select('Bottom of post');
+    cy.get('#site-description').clear({force: true}).type(descripcion, {force: true});
     cy.wait(2000);
     cy.get('section.view-actions>button.gh-btn').click({force: true});
-    cy.wait(1000);
 }
 
 function modificarPostEmailText(newText) {
@@ -254,6 +253,6 @@ export const utils = {
     modificarColorBotonInferior,
     modificarColorSchemeDark,
     modificarPublicationFeedLayout,
-    modificarPostEmailSignUp,
+    modificarSiteDescription,
     modificarPostEmailText
 }

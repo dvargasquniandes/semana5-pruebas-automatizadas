@@ -40,7 +40,7 @@
 16. Loguearse, entrar a configuraciones en la seccion Design, entrar a Brand, cambiar el color del boton inferior subscribe a #1afff0, darle guardar, ir a view site y verificar el color del boton inferior Subscribe
 17. Loguearse, entrar a configuraciones en la seccion Design, entrar a Site-wide, cambiar el color scheme a Dark, darle guardar, ir a view site y verificar que la pagina tiene el color scheme dark
 18. Loguearse, entrar a configuraciones en la seccion Design, entrar a Homepage, cambiar el Feed Layout a List, darle guardar, ir a view site y verificar que el Homepage tenga el layout en Lista
-19. Loguearse, entrar a configuraciones en la seccion Design, entrar a Post, cambiar el post email a Bottom of post, darle guardar, ir a view site dar clic sobre la imagen del post de coming soon y verificar que el post contenha el email signup
+19. Loguearse, entrar a configuraciones en la seccion Design, entrar a Brand, cambiar el site description, darle guardar, ir a view site y verificar la nueva descripcion del sitio
 20. Loguearse, entrar a configuraciones en la seccion Design, entrar a Post, cambiar el Email signup test a "Prueba cambio", darle guardar, ir a view site dar clic sobre la imagen del post de coming soon y verificar que el post tenga en su email text "Prueba Cambio"
 
 #### Ejecutar Ghost 🚀

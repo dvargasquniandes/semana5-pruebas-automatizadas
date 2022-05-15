@@ -14,7 +14,7 @@ describe('Escenario de prueba 19', function () {
         cy.visit(`${url}/ghost/`);
         cy.clearCookies();
     })
-    it('Loguearse, entrar a configuraciones en la seccion Design, entrar a Post, cambiar el post email a Bottom of post, darle guardar, ir a view site dar clic sobre la imagen del post de coming soon y verificar que el post contenha el email signup', function () {
+    it('Loguearse, entrar a configuraciones en la seccion Design, entrar a Brand, cambiar el site description, darle guardar, ir a view site y verificar la nueva descripcion del sitio', function () {
         let indiceImagen = 0;
 
         // Login
@@ -22,13 +22,14 @@ describe('Escenario de prueba 19', function () {
         cy.screenshot("imagen_" + (indiceImagen++))
 
         // Modificar Color Boton Inferior
-        utils.modificarPostEmailSignUp()
+        utils.modificarSiteDescription('Prueba 19 - descripcion')
         cy.screenshot("imagen_" + (indiceImagen++))
 
-        // Verificar que el post email para un post ahora esta dentro del post
+        // Verificar que el boton cambio de color en la pagina principal
         cy.visit(`${url}`);
         cy.wait(1000);
         cy.screenshot("imagen_" + (indiceImagen++))
-
+        cy.get('.site-header-content').find('p').contains('Prueba 19 - descripcion')
+        cy.screenshot("imagen_" + (indiceImagen++))
     })
 })
