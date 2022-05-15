@@ -1,3 +1,4 @@
 /ghost-cypress/node_modules
 /ghost/current/node_modules
 /ghost/versions/3.41.1/node_modules
+node_modules/
