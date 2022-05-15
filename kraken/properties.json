@@ -3,5 +3,7 @@
     "LOGIN": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/ghost/#/signin",
 	"ABOUT": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/about/",
 	"USERNAME1":"o.alvareze@uniandes.edu.co",
-	"PASSWORD1": "123123123123"
+	"PASSWORD1": "123123123123",
+	"URLV3": "http://ec2-52-200-112-117.compute-1.amazonaws.com:2369/",
+	"LOGINV3": "http://ec2-52-200-112-117.compute-1.amazonaws.com:2369/ghost/#/signin"
 }

@@ -186,6 +186,35 @@ When('I create a new post with title {string} and content {string}', async funct
     await closeMessage.click();
 });
 
+When('I create a new post with title {string} and content {string} V3', async function (title, content) {
+    let textarea = await this.driver.$('textarea[placeholder="Post Title"]');
+    await textarea.addValue(title);
+    let parrafo = await this.driver.$('div[data-placeholder="Begin writing your post..."]');
+    await parrafo.addValue(content);
+    let publish = await this.driver.$('.gh-publishmenu');
+    await publish.click();
+    let publishButton = await this.driver.$('.gh-publishmenu-button');
+    await publishButton.click();
+});
+
+When('I edit a post with title {string} and content {string} V3', async function (title, content) {
+    let textarea = await this.driver.$('textarea[placeholder="Post Title"]');
+    await textarea.setValue(title);
+    let parrafo = await this.driver.$('div[data-placeholder="Begin writing your post..."]');
+    await parrafo.addValue(content);
+    let publishButton = await this.driver.$('.gh-publishmenu-button');
+    await publishButton.click();
+});
+
+When('I edit a page with title {string} and content {string} V3', async function (title, content) {
+    let textarea = await this.driver.$('textarea[placeholder="Page Title"]');
+    await textarea.setValue(title);
+    let parrafo = await this.driver.$('div[data-placeholder="Begin writing your page..."]');
+    await parrafo.addValue(content);
+    let publishButton = await this.driver.$('.gh-publishmenu-button');
+    await publishButton.click();
+});
+
 When('I create a new page with title {string} and content {string}', async function (title, content) {
     let textarea = await this.driver.$('textarea[placeholder="Page title"]');
     await textarea.setValue(title);
@@ -199,10 +228,28 @@ When('I create a new page with title {string} and content {string}', async funct
     await closeMessage.click();
 });
 
+When('I create a new page with title {string} and content {string} V3', async function (title, content) {
+    let textarea = await this.driver.$('textarea[placeholder="Page Title"]');
+    await textarea.setValue(title);
+    let parrafo = await this.driver.$('div[data-placeholder="Begin writing your page..."]');
+    await parrafo.addValue(content);
+    let publish = await this.driver.$('.gh-publishmenu');
+    await publish.click();
+    let publishButton = await this.driver.$('.gh-publishmenu-button');
+    await publishButton.click();
+});
+
 When('I create a new tag with name {string}', async function (name) {
     let tagName = await this.driver.$('input[id="tag-name"]');
     await tagName.setValue(name);
     let publishButton = await this.driver.$('button[class="gh-btn gh-btn-primary gh-btn-icon ember-view"]');
+    return await publishButton.click();
+});
+
+When('I create a new tag with name {string} V3', async function (name) {
+    let tagName = await this.driver.$('input[id="tag-name"]');
+    await tagName.setValue(name);
+    let publishButton = await this.driver.$('button[class="gh-btn gh-btn-blue gh-btn-icon ember-view"]');
     return await publishButton.click();
 });
 
@@ -239,8 +286,22 @@ When('I create a new post with title {string} and content {string} wihtout savin
     await parrafo.addValue(content);
 });
 
+When('I create a new post with title {string} and content {string} wihtout saving V3', async function (title, content) {
+    let textarea = await this.driver.$('textarea[placeholder="Post Title"]');
+    await textarea.setValue(title);
+    let parrafo = await this.driver.$('div[data-placeholder="Begin writing your post..."]');
+    await parrafo.addValue(content);
+});
+
 When('I create a new page with title {string} and content {string} wihtout saving', async function (title, content) {
     let textarea = await this.driver.$('textarea[placeholder="Page title"]');
+    await textarea.setValue(title);
+    let parrafo = await this.driver.$('div[data-placeholder="Begin writing your page..."]');
+    await parrafo.addValue(content);
+});
+
+When('I create a new page with title {string} and content {string} wihtout saving V3', async function (title, content) {
+    let textarea = await this.driver.$('textarea[placeholder="Page Title"]');
     await textarea.setValue(title);
     let parrafo = await this.driver.$('div[data-placeholder="Begin writing your page..."]');
     await parrafo.addValue(content);
