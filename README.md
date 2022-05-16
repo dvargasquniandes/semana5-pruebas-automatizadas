@@ -104,7 +104,7 @@ El siguiente es el listado de los 10 escenarios de prueba elegidos para las prue
 8. Loguearse, crear una página, eliminarla, salir del admin, y revisar que no esté la página 
 12. Loguearse, crear tag, borrarlo y verificar que no aparezca en el listado
 
-### Notas de ejecución de las pruebas en la semana 7 en Cypress
+### Notas de ejecución de las pruebas en la semana 6 en Cypress
 
 - Para las pruebas de Cypress, se debe primero correr en la versión actual (4.47.1) asegurandose que el archivo cypress.env.json contenga las siguientes entradas (se recomienda colocar a las entradas de la versión 3.42.0 un nombre diferente ya que json no permite comentarios):
 
