@@ -1,0 +1,109 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_Inicio_-_Ghost_version_4471_0_document_0_default.png",
+        "test": "../bitmaps_test/20220515-192056/backstop_default_Inicio_-_Ghost_version_4471_0_document_0_default.png",
+        "selector": "document",
+        "fileName": "backstop_default_Inicio_-_Ghost_version_4471_0_document_0_default.png",
+        "label": "Inicio - Ghost version 4.47.1",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/ghost/#/signin",
+        "referenceUrl": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/ghost/#/signin",
+        "expect": 0,
+        "viewportLabel": "default",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.022708333333333334,
+          "misMatchPercentage": "0.02",
+          "analysisTime": 65
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_Home_-_Ghost_version_4471__0_document_0_default.png",
+        "test": "../bitmaps_test/20220515-192056/backstop_default_Home_-_Ghost_version_4471__0_document_0_default.png",
+        "selector": "document",
+        "fileName": "backstop_default_Home_-_Ghost_version_4471__0_document_0_default.png",
+        "label": "Home - Ghost version 4.47.1 ",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/",
+        "referenceUrl": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/",
+        "expect": 0,
+        "viewportLabel": "default",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.8856043543543543,
+          "misMatchPercentage": "0.89",
+          "analysisTime": 117
+        },
+        "diffImage": "../bitmaps_test/20220515-192056/failed_diff_backstop_default_Home_-_Ghost_version_4471__0_document_0_default.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_Inicio_-_Ghost_version_3420_0_document_0_default.png",
+        "test": "../bitmaps_test/20220515-192056/backstop_default_Inicio_-_Ghost_version_3420_0_document_0_default.png",
+        "selector": "document",
+        "fileName": "backstop_default_Inicio_-_Ghost_version_3420_0_document_0_default.png",
+        "label": "Inicio - Ghost version 3.42.0",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://ec2-52-200-112-117.compute-1.amazonaws.com:2369/ghost/#/signin",
+        "referenceUrl": "http://ec2-52-200-112-117.compute-1.amazonaws.com:2369/ghost/#/signin",
+        "expect": 0,
+        "viewportLabel": "default",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.0225,
+          "misMatchPercentage": "0.02",
+          "analysisTime": 74
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_Home_-_Ghost_version_3420__0_document_0_default.png",
+        "test": "../bitmaps_test/20220515-192056/backstop_default_Home_-_Ghost_version_3420__0_document_0_default.png",
+        "selector": "document",
+        "fileName": "backstop_default_Home_-_Ghost_version_3420__0_document_0_default.png",
+        "label": "Home - Ghost version 3.42.0 ",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://ec2-52-200-112-117.compute-1.amazonaws.com:2369/",
+        "referenceUrl": "http://ec2-52-200-112-117.compute-1.amazonaws.com:2369/",
+        "expect": 0,
+        "viewportLabel": "default",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    }
+  ],
+  "id": "backstop_default"
+}

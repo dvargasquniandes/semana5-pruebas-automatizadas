@@ -1,0 +1,40 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_Inicio_0_document_0_default.png",
+        "test": "../bitmaps_test/20220515-180833/backstop_default_Inicio_0_document_0_default.png",
+        "selector": "document",
+        "fileName": "backstop_default_Inicio_0_document_0_default.png",
+        "label": "Inicio",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/ghost/#/signin",
+        "referenceUrl": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/ghost/#/signin",
+        "expect": 0,
+        "viewportLabel": "default",
+        "error": "Reference file not found /Users/andresmartincantorurrego/Desktop/MAESTRIA/SEMESTRE 1/CICLO 2/PRUEBAS AUTOMATIZADAS /proyecto/semana5-pruebas-automatizadas/backstop_data/bitmaps_reference/backstop_default_Inicio_0_document_0_default.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_Ghost_0_document_0_default.png",
+        "test": "../bitmaps_test/20220515-180833/backstop_default_Ghost_0_document_0_default.png",
+        "selector": "document",
+        "fileName": "backstop_default_Ghost_0_document_0_default.png",
+        "label": "Ghost",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/",
+        "referenceUrl": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/",
+        "expect": 0,
+        "viewportLabel": "default",
+        "error": "Reference file not found /Users/andresmartincantorurrego/Desktop/MAESTRIA/SEMESTRE 1/CICLO 2/PRUEBAS AUTOMATIZADAS /proyecto/semana5-pruebas-automatizadas/backstop_data/bitmaps_reference/backstop_default_Ghost_0_document_0_default.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "backstop_default"
+}
