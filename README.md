@@ -104,13 +104,13 @@ El siguiente es el listado de los 10 escenarios de prueba elegidos para las prue
 
 - Para las pruebas de Cypress, se debe primero correr en la versión actual (4.47.1) asegurandose que el archivo cypress.env.json contenga las siguientes entradas (se recomienda colocar a las entradas de la versión 3.42.0 un nombre diferente ya que json no permite comentarios):
 
-    "url_base": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369",
-    "ghost_version": "ghost-4.47.1",
+    - "url_base": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369",
+    - "ghost_version": "ghost-4.47.1",
 
 - Luego de ejecutar las 5 pruebas de manera manual (una a una) en cypress contra Ghost 4.47.1, se debe cambiar las variables de entorno para que apunte a la versión 3.42.0, asegurandose que el archivo cypress.env.json  contenga las entradas:
 
-    "url_base": "http://ec2-52-200-112-117.compute-1.amazonaws.com:2369",
-    "ghost_version": "ghost-3.42.0",
+    - "url_base": "http://ec2-52-200-112-117.compute-1.amazonaws.com:2369",
+    - "ghost_version": "ghost-3.42.0",
 
 - Los screenshots quedan en ghost-cypress/cypress/screenshots en una carpeta para cada escenario de prueba (Ej. ghost-cypress/cypress/screenshots/Escenario-prueba4.js), adentro se encuentran dos carpetas marcadas con la versión correspondiente a la variable de entorno "ghost_version" de cypress, haciendo que la ejecución de la prueba en cada versión tenga una carpeta según cada versión. Las pruebas ejecutadas son idénticas en las dos versiones, se intentó unificar los pasos y los selectores. La generación de las imágenes de cada paso se hace con un incremental, haciendo que en cada carpeta de versión de cada escenario se tenga un archivo llamado imagen_X.png, siendo X un incremental a partir de cero, ésto hace que las imágenes estén alineadas siempre que la prueba sea exitosa en ambas versiones.
 
