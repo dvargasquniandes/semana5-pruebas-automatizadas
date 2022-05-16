@@ -8,6 +8,7 @@ const user = {
 
 const id = faker.datatype.uuid();
 const url = Cypress.env('url_base');
+const ghostVersion = Cypress.env('ghost_version');
 
 describe('Escenario de prueba 17', function () {
     before(function () {
@@ -19,17 +20,17 @@ describe('Escenario de prueba 17', function () {
 
         // Login
         utils.autenticar(user)
-        cy.screenshot("imagen_" + (indiceImagen++))
+        cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
 
         // Modificar Color Boton Inferior
         utils.modificarColorSchemeDark();
-        cy.screenshot("imagen_" + (indiceImagen++))
+        cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
 
         // Verificar que el color scheme cambio a Dark
         cy.visit(`${url}`);
         cy.wait(1000);
-        cy.screenshot("imagen_" + (indiceImagen++))
+        cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
         cy.document().its('documentElement').should('have.class', 'dark-mode')
-        cy.screenshot("imagen_" + (indiceImagen++))
+        cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
     })
 })

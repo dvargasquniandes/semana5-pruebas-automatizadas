@@ -8,6 +8,7 @@ const user = {
 
 const id = faker.datatype.uuid();
 const url = Cypress.env('url_base');
+const ghostVersion = Cypress.env('ghost_version');
 
 describe('Escenario de prueba 19', function () {
     before(function () {
@@ -19,17 +20,17 @@ describe('Escenario de prueba 19', function () {
 
         // Login
         utils.autenticar(user)
-        cy.screenshot("imagen_" + (indiceImagen++))
+        cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
 
         // Modificar Color Boton Inferior
         utils.modificarSiteDescription('Prueba 19 - descripcion')
-        cy.screenshot("imagen_" + (indiceImagen++))
+        cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
 
         // Verificar que el boton cambio de color en la pagina principal
         cy.visit(`${url}`);
         cy.wait(1000);
-        cy.screenshot("imagen_" + (indiceImagen++))
+        cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
         cy.get('.site-header-content').find('p').contains('Prueba 19 - descripcion')
-        cy.screenshot("imagen_" + (indiceImagen++))
+        cy.screenshot(ghostVersion + "/imagen_" + (indiceImagen++))
     })
 })
