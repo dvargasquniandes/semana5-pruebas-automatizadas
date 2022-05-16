@@ -155,4 +155,9 @@ Se cargaron en Jira los Issues detectados en la comparación en la siguiente URL
 
 https://oalvareze.atlassian.net/jira/software/c/projects/PAG/issues
 
-
+#### Ejecutar pruebas Backstop.js 🚀
+1. Para hacer uso de las herramientas de Backstop, debe descargar la CLI. Abra una terminal y ejecute el siguiente comando: npm install -g backstopjs
+2. Ahora, en la misma terminal, ubíquese en el directorio donde ubicará el nuevo directorio del proyecto y luego Ejecute el comando backstop init
+3. En la misma terminal donde ejecutó el anterior comando, ejecute el siguiente comando backstop approve (Esto guardará los resultados de la prueba más reciente como la referencia)
+4. Ahora ejecute nuevamente el comando backstop test para comparar las imágenes que se obtienen en esta prueba con las que obtuvo previamente.
+5. Cada vez que ejecute el comando backstop test, se modificará el archivo index.html que contiene el reporte, ubicado en el directorio html_report para mostrar las nuevas imágenes y sus diferencias. Este reporte muestra cada uno de los escenarios configurados para la prueba
