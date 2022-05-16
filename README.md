@@ -155,6 +155,10 @@ Se cargaron en Jira los Issues detectados en la comparación en la siguiente URL
 
 https://oalvareze.atlassian.net/jira/software/c/projects/PAG/issues
 
+#### Ejecución de la comparación de las pruebas de kraken con resemble
+
+Para el proceso de comparación de las pruebas con Kraken se deben realizar los mismos pasos que se expresaron anteriormente para el caso de resemble con cypress, solamente que en vez de hacer cd a resemble-cypress se hace al directorio resemble-kraken
+
 #### Ejecutar pruebas Backstop.js 🚀
 1. Para hacer uso de las herramientas de Backstop, debe descargar la CLI. Abra una terminal y ejecute el siguiente comando: npm install -g backstopjs
 2. Ahora, en la misma terminal, ubíquese en el directorio donde ubicará el nuevo directorio del proyecto y luego Ejecute el comando backstop init
