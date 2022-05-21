@@ -7,9 +7,9 @@ const user = {
 
 const url = Cypress.env('url_base');
 
-describe('Escenario de prueba 90', function () {
+describe('Escenario de prueba 90 al 99', function () {
     before(function () {
-        cy.fixture('inicio_sesion.json').then((TestData) =>
+        cy.fixture('inicio_sesion_negativo.json').then((TestData) =>
         {
             this.data = TestData
         });
