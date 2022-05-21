@@ -1,0 +1,47 @@
+[{
+  "username": "rbelton0@hexun.com",
+  "password": "ThkCNEM",
+  "resultado_esperado" : "There is no user with that email address."
+  }, {
+  "username": "ggunter1",
+  "password": "HAlh3rT2QG",
+  "resultado_esperado" : "Please fill out the form to sign in."
+}, {
+  "username": "@yellowbook.com",
+  "password": "3HfxdhLOjcIJ",
+  "resultado_esperado" : "Please fill out the form to sign in."
+}, {
+  "username": "zmurdy3@networkadvertising",
+  "password": "Coa8Cu",
+  "resultado_esperado" : "Please fill out the form to sign in."
+}, {
+  "username": "",
+  "password": "b3ohocaFal",
+  "resultado_esperado" : "Please fill out the form to sign in."
+}, {
+  "username": "gimms4@dagondesign.com",
+  "password": "",
+  "resultado_esperado" : "Please fill out the form to sign in."
+}, 
+{
+  "username": "",
+  "password": "",
+  "resultado_esperado" : "Please fill out the form to sign in."
+}, 
+{
+  "username": "o.alvareze@uniandes.edu.co",
+  "password": "🚾 🆒 🆓 🆕 🆖 🆗 🆙 🏧",
+  "resultado_esperado" : "Your password is incorrect."
+},
+{
+  "username": "o.alvareze@uniandes.edu.co",
+  "password": "() { 0; }; touch /tmp/blns.shellshock1.fail;",
+  "resultado_esperado" : "Your password is incorrect."
+},
+{
+  "username": "o.alvareze@uniandes.edu.co",
+  "password": "d2#U%+e@f+rL+5^N9qd$r$S$&vHsv6dTVg@9&KU@ZfbZgPVF3G!TNEw-gKk%a2#f#ADZBmsWJdS&36P3mkVzNTvGNL^DCXDj-N+J^Tf_bjgaDzg7yUax38Z2j*AggQ4kHP=*QZzQx=tbyTytws%hP@7LjaTMKnbQNwCccL-M2hNJ25c3N=yZvVs8MZ?!epq*fjgm8z2Nb$Nesx4dAC3#PC%Hd#sW6tqK4k#4_4Qs%UQqSWstCGe2Yd?EF?KtFdc655$BSXx2crVZzzpJt#+UCF5AzBtT8@X7G%hgYu@dbkrJFA_w63ZpXfBD?V#whgP#4qXgqq!*6+V2bGR8wUH+3ChYc9G@y#nS$m*Q3K#n*7BdYATAZY_fdW5_deRwkBWJAft5rAAd+!GL$m*V*eGhk89C8V&MW6Q98S*!atkG7R&AUeQsqF8QTrJKz?+qP*8TUbX_tHb5c$_Jv+rHX&jdT-UjD#45%eyz94^jdp?q$D*8&&Vn*RuY+-gSt#RF4cH-LxBQNFuK2X_meZca3Kp=DJskAwkpZ!thZ*VkRSWbKsH95MkX#LC#2fPQ9SxzS6zFdTSaygR+7DYQymRwjyN8-^nh+5uCG&vR59mGcbQ9VWM^S!xktwaK_ZFMGmycvvMGuMTG5@-F6hW?-=QPVJ*+7-J8w-#PH52sDDRxdPNLprjYgm*JPE=5e2CkS3d-p^YcE@RTujG4a==4KQ^SPhWBV=YaLhe=DuJY2@$Qx3!B7_NczL-YmTex=Wwx2Mvk=GZDxK94Mq#fvVe4qJ-WB5%EWMcHJW6fAA_G9jddqv9#Upgvg=q!R9s563G?ggP#bUNyK#An85jaHmsUG!2LxJV3PxC!dWWRR4$GSR_Knp!JSGku@yzMHHnm=%XmBTLeHVEpN6@YY!A%m?a4KzCQ?MCpGkvQ_&J=g!?m9?K48k6=SJ--rDgnXpxhzGuRWCXLMhWLFwbQ=WP$@p$A8NHdJ$87s8QX$yGVrJ==3vXaK#pWNYUHHJ@p5phXbJXbJ$xc8x%Z!fte#p%nT2QPSRGeAc59Hm6e?K6x+&BBwX+BN+3CLh7S?SX#EMQ@NbMTS4v?m&^aVdH%&JG_q9NyzD5SjCZyaQ&h!XW&BNWUfEHnJ28QE7ZrJzB2@3W87E!v^u^e2-ZP8FYs4&6sA&eGHFV&yk!=&zQPut7*52Hd=eTyYRTwQsnV&4p^bV^ag*CumPzy63^BF^dnZEZ%VndpG38tk5-_^E?VvLa=WN$AW=NSqyaj*j*HtaB*Mk9HZQpv$ztx9vp-mw4Q4jWd&2DJ$Fyx%9Sa*jS=w@JHBBK%VJ4H9w5_h9a&V&%D8$aEpNa&zHr9eDE8sYk3ucZLEwZam^73hGLUWrEvZqF=Zp4K=LXxDgEr4*fuuahBks8+@3-R*?jJMW&jD4YTE+r&@tgK^W42^&5#@X=4sNGJjFG4t?u&u3cV!KZzSy$Knh@$t*qppBRp*8DB4$6PKWpq7$x8xA7nertGDn+tAPJvRa6BvfE^F!u7dk%434UWaQ@sVw#_*Et!z%MwG@z==A^py?==7$U2NXJe?h74tEU!%K$&msJyLMa+M4g=4Ud9+vkM&uR9ARs2c?-v*K#=e6$RSZ6XMzt$Mg-G7A9dnF8@8-DqCTD?K*^Z#C@C3+kDsMsPw#56y^wpKAr?+e*3u_QwjbDe*f!MzjHLt9tWQgWTvkLta!SN3vcE9Dstd9D@th?tJ%jgkSF$SfLs9v$J$g-6#GEJY_2V@6g5H_yE@V6hrvFJLnYkm-gPF5H3umkr5@re6MzXLwJjbf=FhuDj6t9g-^w=fpjHrMFR!qSUAk-38V!fLppLRfG555Z5jXpUdQ6bn7Q8*Fb%qXGyF+dUbg%wNM+Hh8NkyCU&@rkm5rkb!=_mCvwr4WXerm6&NAY8ccWCzMw_WEY8*!t_^5Q9m$h3jnGD+Hvyf3GQde=KBV2bbxXL&J2ExGYAPT2*zj!B7y?chkbgtZ22HTVaAZ8u-Cux^UXHdE7%jqdYDrJ5z%Pyd%6p#S-rQ7#NJ+e#DfDaT$YRy=f5E=&d*Jfu",
+  "resultado_esperado" : "Your password is incorrect."
+}
+
+]
