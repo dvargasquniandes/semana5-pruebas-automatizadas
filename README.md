@@ -151,7 +151,7 @@ El reporte ordena alfabéticamente los escenarios de prueba, como el número del
 
 (Nota, la hora del servidor de ejecución no está configurada con el TimeZone de Colombia, por lo que la hora real de ejecución es en la noche del Domingo)
 
-Se cargaron en Jira los Issues detectados en la comparación en la siguiente URL (Los permisos de acceso se concedieron la primera semana del curso con el usuario pruebas_miso@uniandes.edu.co clave PruebasMiso)
+Se cargaron en Jira los Issues detectados en la comparación en la siguiente URL (Los permisos de acceso se concedieron la primera semana del curso con el usuario pruebas_miso@outlook.com clave PruebasMiso)
 
 https://oalvareze.atlassian.net/jira/software/c/projects/PAG/issues
 
@@ -169,6 +169,39 @@ Para el proceso de comparación de las pruebas con Kraken se deben realizar los 
 # Semana 7
 
 
+
+### Lote de pruebas del 91 al 120
+
+Todas las pruebas de la semana 7 se encuentran en [/ghost-cypress-s7](/ghost-cypress-s7/)
+
+#### Estrategias de datos
+
+91-100 pool de datos a-priori: (Pruebas negativas) Se generó un conjunto de datos de 10 registros con mockaroo (email y password) y se modificó manualmente para tener 10 escenarios de pruebas diferentes, incluyendo el texto del resultado esperado para validar que cada escenario genere el error correspondiente, se guardó el archivo en [/ghost-cypress-s7/cypress/fixtures/inicio_sesion_negativo.json](/ghost-cypress-s7/cypress/fixtures/inicio_sesion_negativo.json), para poder ejecutar los 10 escenarios se hizo un loop en el archivo [](/ghost-cypress-s7/cypress/integration/Escenario-prueba91.js) y éste realiza la validación según el resultado esperado de cada prueba (por lo mismo, no se generan de manera independiente los scripts de prueba del 92 al 100)
+
+101-110 pool de datos (pseudo) aleatorio dinámico: (Pruebas negativas y positivas) Se realiza integración con mockaroo y se descargan los datos por medio de API (en mokaroo se generaron 6 esquemas, cada uno con su API, según las necesidades de las diferentes pruebas, algunos se re-usaron)
+
+111-120 escenario aleatorio con datos al vuelo: (Pruebas negativas y positivas) Mismos escenarios de prueba del conjunto 101-110, pero generados al vuelo con kakerjs
+
+
 El detalle del informe se encuentra en el archivo:
 
 [Informe Semana 7.xlsx](Informe%20Semana%207.xlsx)
+
+#### Ejecutar pruebas en cypress 🚀
+
+Luego de descargar los archivos, se debe situar sobre /ghost-cypress-s7 y ejecutar el comando 
+```
+cypress open
+```
+
+Cuando abra cypress, si no aparece seleccionado el proyecto, debe buscarlo en la carpeta /ghost-cypress-s7
+
+Se recomienda ejecutar las pruebas una a una ya que hay algunas que fallan por errores de ghost (es decir, la prueba está bien estructurada y falla cypress, se deben mantener para volver a correrlas cuando el error en cypress sea corregido, de hecho ésto generó issues registrados en Jira)
+
+#### Issues reportados en Jira
+
+El link de acceso a Jira es (https://oalvareze.atlassian.net/jira/software/c/projects/PAG/issues)[https://oalvareze.atlassian.net/jira/software/c/projects/PAG/issues]
+
+Usuario: pruebas_miso@outlook.com 
+clave: PruebasMiso
+
