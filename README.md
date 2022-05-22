@@ -165,3 +165,137 @@ Para el proceso de comparación de las pruebas con Kraken se deben realizar los 
 3. En la misma terminal donde ejecutó el anterior comando, ejecute el siguiente comando backstop approve (Esto guardará los resultados de la prueba más reciente como la referencia)
 4. Ahora ejecute nuevamente el comando backstop test para comparar las imágenes que se obtienen en esta prueba con las que obtuvo previamente.
 5. Cada vez que ejecute el comando backstop test, se modificará el archivo index.html que contiene el reporte, ubicado en el directorio html_report para mostrar las nuevas imágenes y sus diferencias. Este reporte muestra cada uno de los escenarios configurados para la prueba
+
+# Semana 7
+
+| Id             | Escenario | Estrategia | Funcionalidad | Observaciones | Realizado por |
+| -------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------- | ------ |
+| 1 |  |  |  |  |  |
+| 2 |  |  |  |  |  |
+| 3 |  |  |  |  |  |
+| 4 |  |  |  |  |  |
+| 5 |  |  |  |  |  |
+| 6 |  |  |  |  |  |
+| 7 |  |  |  |  |  |
+| 8 |  |  |  |  |  |
+| 9 |  |  |  |  |  |
+| 10 |  |  |  |  |  |
+| 11 |  |  |  |  |  |
+| 12 |  |  |  |  |  |
+| 13 |  |  |  |  |  |
+| 14 |  |  |  |  |  |
+| 15 |  |  |  |  |  |
+| 16 |  |  |  |  |  |
+| 17 |  |  |  |  |  |
+| 18 |  |  |  |  |  |
+| 19 |  |  |  |  |  |
+| 20 |  |  |  |  |  |
+| 21 |  |  |  |  |  |
+| 22 |  |  |  |  |  |
+| 23 |  |  |  |  |  |
+| 24 |  |  |  |  |  |
+| 25 |  |  |  |  |  |
+| 26 |  |  |  |  |  |
+| 27 |  |  |  |  |  |
+| 28 |  |  |  |  |  |
+| 29 |  |  |  |  |  |
+| 30 |  |  |  |  |  |
+| 31 |  |  |  |  |  |
+| 32 |  |  |  |  |  |
+| 33 |  |  |  |  |  |
+| 34 |  |  |  |  |  |
+| 35 |  |  |  |  |  |
+| 36 |  |  |  |  |  |
+| 37 |  |  |  |  |  |
+| 38 |  |  |  |  |  |
+| 39 |  |  |  |  |  |
+| 40 |  |  |  |  |  |
+| 41 |  |  |  |  |  |
+| 42 |  |  |  |  |  |
+| 43 |  |  |  |  |  |
+| 44 |  |  |  |  |  |
+| 45 |  |  |  |  |  |
+| 46 |  |  |  |  |  |
+| 47 |  |  |  |  |  |
+| 48 |  |  |  |  |  |
+| 49 |  |  |  |  |  |
+| 50 |  |  |  |  |  |
+| 51 |  |  |  |  |  |
+| 52 |  |  |  |  |  |
+| 53 |  |  |  |  |  |
+| 54 |  |  |  |  |  |
+| 55 |  |  |  |  |  |
+| 56 |  |  |  |  |  |
+| 57 |  |  |  |  |  |
+| 58 |  |  |  |  |  |
+| 59 |  |  |  |  |  |
+| 50 |  |  |  |  |  |
+| 51 |  |  |  |  |  |
+| 52 |  |  |  |  |  |
+| 53 |  |  |  |  |  |
+| 54 |  |  |  |  |  |
+| 55 |  |  |  |  |  |
+| 56 |  |  |  |  |  |
+| 57 |  |  |  |  |  |
+| 58 |  |  |  |  |  |
+| 59 |  |  |  |  |  |
+| 60 |  |  |  |  |  |
+| 61 |  |  |  |  |  |
+| 62 |  |  |  |  |  |
+| 63 |  |  |  |  |  |
+| 64 |  |  |  |  |  |
+| 65 |  |  |  |  |  |
+| 66 |  |  |  |  |  |
+| 67 |  |  |  |  |  |
+| 68 |  |  |  |  |  |
+| 69 |  |  |  |  |  |
+| 70 |  |  |  |  |  |
+| 71 |  |  |  |  |  |
+| 72 |  |  |  |  |  |
+| 73 |  |  |  |  |  |
+| 74 |  |  |  |  |  |
+| 75 |  |  |  |  |  |
+| 76 |  |  |  |  |  |
+| 77 |  |  |  |  |  |
+| 78 |  |  |  |  |  |
+| 79 |  |  |  |  |  |
+| 80 |  |  |  |  |  |
+| 81 |  |  |  |  |  |
+| 82 |  |  |  |  |  |
+| 83 |  |  |  |  |  |
+| 84 |  |  |  |  |  |
+| 85 |  |  |  |  |  |
+| 86 |  |  |  |  |  |
+| 87 |  |  |  |  |  |
+| 88 |  |  |  |  |  |
+| 89 |  |  |  |  |  |
+| 90 |  |  |  |  |  @oalvareze |
+| 91 |  |  |  |  |  @oalvareze |
+| 92 |  |  |  |  |  @oalvareze |
+| 93 |  |  |  |  |  @oalvareze |
+| 94 |  |  |  |  |  @oalvareze |
+| 95 |  |  |  |  |  @oalvareze |
+| 96 |  |  |  |  |  @oalvareze |
+| 97 |  |  |  |  |  @oalvareze |
+| 98 |  |  |  |  |  @oalvareze |
+| 99 |  |  |  |  |  @oalvareze |
+| 100 |  |  |  |  |  @oalvareze |
+| 101 |  |  |  |  |  @oalvareze |
+| 102 |  |  |  |  |  @oalvareze |
+| 103 |  |  |  |  |  @oalvareze |
+| 104 |  |  |  |  |  @oalvareze |
+| 105 |  |  |  |  |  @oalvareze |
+| 106 |  |  |  |  |  @oalvareze |
+| 107 |  |  |  |  |  @oalvareze |
+| 108 |  |  |  |  |  @oalvareze |
+| 109 |  |  |  |  |  @oalvareze |
+| 110 |  |  |  |  |  @oalvareze |
+| 111 |  |  |  |  |  @oalvareze |
+| 112 |  |  |  |  |  @oalvareze |
+| 113 |  |  |  |  |  @oalvareze |
+| 114 |  |  |  |  |  @oalvareze |
+| 116 |  |  |  |  |  @oalvareze |
+| 117 |  |  |  |  |  @oalvareze |
+| 118 |  |  |  |  |  @oalvareze |
+| 119 |  |  |  |  |  @oalvareze |
+| 120 |  |  |  |  |  @oalvareze |
