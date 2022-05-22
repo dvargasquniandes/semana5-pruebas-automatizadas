@@ -7,7 +7,7 @@ const user = {
 
 const url = Cypress.env('url_base');
 
-describe('Escenario de prueba 90 al 99', function () {
+describe('Escenario de prueba 91 al 100', function () {
     before(function () {
         cy.fixture('inicio_sesion_negativo.json').then((TestData) =>
         {

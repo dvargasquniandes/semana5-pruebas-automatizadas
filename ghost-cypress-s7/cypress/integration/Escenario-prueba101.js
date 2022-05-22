@@ -7,7 +7,7 @@ const user = {
 
 const url = Cypress.env('url_base');
 
-describe('Escenario de prueba 100', function () {
+describe('Escenario de prueba 101', function () {
     before(function () {
         const respuestaMockaroo = cy.request("GET","https://my.api.mockaroo.com/usuarios_falsos.json?key=1abdad40")
             .then((respuesta) =>{
