@@ -200,7 +200,7 @@ Se recomienda ejecutar las pruebas una a una ya que hay algunas que fallan por e
 
 #### Issues reportados en Jira
 
-El link de acceso a Jira es (https://oalvareze.atlassian.net/jira/software/c/projects/PAG/issues)[https://oalvareze.atlassian.net/jira/software/c/projects/PAG/issues]
+El link de acceso a Jira es https://oalvareze.atlassian.net/jira/software/c/projects/PAG/issues
 
 Usuario: pruebas_miso@outlook.com 
 clave: PruebasMiso
