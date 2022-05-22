@@ -169,4 +169,6 @@ Para el proceso de comparación de las pruebas con Kraken se deben realizar los 
 # Semana 7
 
 
-El detalle del informe se encuentra en el archivo [Informe Semana 7.xlsx](Informe Semana 7.xlsx)
+El detalle del informe se encuentra en el archivo:
+
+[Informe Semana 7.xlsx](./Informe%20Semana%207.xlsx)
