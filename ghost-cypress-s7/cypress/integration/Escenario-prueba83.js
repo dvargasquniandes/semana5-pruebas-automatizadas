@@ -28,7 +28,5 @@ describe('Escenario de prueba 83', function () {
         cy.wait(1000);
         cy.get('p.gh-members-list-email').contains(testMiembro.correo).should("exist")
 
-
-
     })
 })
