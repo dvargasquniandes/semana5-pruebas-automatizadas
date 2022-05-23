@@ -1,0 +1,22 @@
+[{
+  "nombre": "Konklux",
+  "correo": " ",
+  "notes": "Sed pulvinar elit ut velit elementum rhoncus eget ac libero. Nulla quis risus feugiat, dictum diam a, lacinia orci. Etiam a ante ornare, dignissim ante a, luctus odio. Etiam sit amet neque augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec at mi imperdiet, tristique ante ac, ornare sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut semper turpis eget feugiat porta. Morbi congue urna nec ipsum varius rhoncus vestibulum.",
+  "resultado_esperado" : "Please enter an email."
+}, {
+  "nombre": "Greenlam",
+  "correo": "cpetrollo0@ycombinator.com",
+  "notes": "Duis vel faucibus orci, et tristique eros. Maecenas sollicitudin dictum magna. Vivamus sed urna aliquet, semper lacus sit amet, porttitor libero. Nam in aliquam arcu. Nullam eget diam eu velit vulputate luctus. In ullamcorper massa eget nunc eleifend faucibus. Morbi scelerisque turpis ac lorem tempus, vel pulvinar orci aliquet. Nulla eget nisi at sapien ultricies bibendum vitae ac tellus. Suspendisse justo nulla, sodales eu euismod vitae, sodales ac libero. Etiam eleifend est erat, non pharetra.",
+  "resultado_esperado" : "Validation error, cannot save member. Member already exists. Attempting to add member with existing email address"
+}, {
+  "nombre": "Subin",
+  "correo": "sescott5@geocities.jp",
+  "notes": "Etiam venenatis sem dapibus erat viverra finibus. Vivamus dapibus auctor mauris, id vehicula diam accumsan posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in nulla non nisi malesuada volutpat. Donec euismod odio et feugiat sagittis. Morbi lobortis quam in libero ullamcorper, nec molestie urna fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus semper lobortis mollis. Sed fringilla pellentesque pulvinar. Nam justo turpis, feugiat ac dictum semper, cursus ac ipsum. Aliquam ultrices viverra elementum. Aliquam velit.",
+  "resultado_esperado" : "Note is too long."
+}, {
+  "nombre": "Felipe",
+  "correo": "anapoleone8@",
+  "notes": "Maecenas congue quis quam non molestie. Maecenas ac venenatis sem. Phasellus in consequat dolor. Duis pellentesque, nunc et viverra efficitur, velit diam facilisis erat, ac lobortis metus ante et nibh. Duis at luctus purus. Sed eu dapibus diam, in gravida quam. Nullam vitae enim vitae lacus semper eleifend quis a mauris. Donec vitae purus gravida, ornare arcu et, sagittis ligula. Donec in blandit.",
+  "resultado_esperado" : "Invalid Email."
+}
+]
