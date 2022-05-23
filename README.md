@@ -168,6 +168,15 @@ Para el proceso de comparación de las pruebas con Kraken se deben realizar los 
 
 # Semana 7
 
+### Lote de pruebas del 1 al 30
+
+#### Estrategias de datos
+1-10 pool de datos a-priori con enfoque negativo y positivo: Se generó un conjunto de datos de 10 registros con mockaroo y se modificó manualmente para tener 10 escenarios de pruebas diferentes, se guardó el archivo en [/ghost-cypress-s7/cypress/fixtures/crear_post.json](/ghost-cypress-s7/cypress/fixtures/crear_post.json), para poder ejecutar los 10 escenarios se hizo un loop en el archivo [](/ghost-cypress-s7/cypress/integration/Escenario-prueba_1-10.js) y éste realiza la creación de las post.
+
+11-20 pool de datos (pseudo) aleatorio dinámico: Se realiza integración con mockaroo y se descargan los datos por medio de API. para poder ejecutar los 10 escenarios se hizo un loop en el archivo [](/ghost-cypress-s7/cypress/integration/Escenario-prueba_11-20.js) y éste realiza la creación de las post por medio de mockaro.
+
+21-30 escenario aleatorio con datos al vuelo usando fakerJS.
+
 ### Lote de pruebas del 31 al 60
 
 #### Estrategias de datos
