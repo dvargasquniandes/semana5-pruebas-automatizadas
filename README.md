@@ -168,38 +168,7 @@ Para el proceso de comparación de las pruebas con Kraken se deben realizar los 
 
 # Semana 7
 
-### Lote de pruebas del 31 al 60
-
-#### Estrategias de datos
-31-40 pool de datos a-priori: Se generó un conjunto de datos de 10 registros con mockaroo y se modificó manualmente para tener 10 escenarios de pruebas diferentes, se guardó el archivo en [/ghost-cypress-s7/cypress/fixtures/crear_pagina.json](/ghost-cypress-s7/cypress/fixtures/crear_pagina.json), para poder ejecutar los 10 escenarios se hizo un loop en el archivo [](/ghost-cypress-s7/cypress/integration/Escenario-prueba31-40.js) y éste realiza la creación de las páginas
-
-41-50 pool de datos (pseudo) aleatorio dinámico: Se realiza integración con mockaroo y se descargan los datos por medio de API
-
-51-60 escenario aleatorio con datos al vuelo usando fakerJS
-
-### Lote de pruebas del 61 al 90
-
-#### Estrategias de datos
-61-70 pool de datos a-priori: Se generó un conjunto de datos de 10 registros con mockaroo y se modificó manualmente para tener 10 escenarios de pruebas diferentes, se guardó el archivo en [/ghost-cypress-s7/cypress/fixtures/crear_miembro_negativo.json](/ghost-cypress-s7/cypress/fixtures/crear_miembro_negativo.json),
- [/ghost-cypress-s7/cypress/fixtures/crear_miembro_positivo.json](/ghost-cypress-s7/cypress/fixtures/crear_miembro_positivo.json) los cuales se usan para poder ejecutar los 10 escenarios se hizo un loop en el archivo [](/ghost-cypress-s7/cypress/integration/Escenario-prueba61-64.js) y [](/ghost-cypress-s7/cypress/integration/Escenario-prueba65-70.js) y éste realiza la creacion de los miembros
-
-71-80 pool de datos (pseudo) aleatorio dinámico: Se realiza integración con mockaroo y se descargan los datos por medio de API
-
-81-90 escenario aleatorio con datos al vuelo usando fakerJS
-
-
-### Lote de pruebas del 91 al 120
-
 Todas las pruebas de la semana 7 se encuentran en [/ghost-cypress-s7](/ghost-cypress-s7/)
-
-#### Estrategias de datos
-
-91-100 pool de datos a-priori: (Pruebas negativas) Se generó un conjunto de datos de 10 registros con mockaroo (email y password) y se modificó manualmente para tener 10 escenarios de pruebas diferentes, incluyendo el texto del resultado esperado para validar que cada escenario genere el error correspondiente, se guardó el archivo en [/ghost-cypress-s7/cypress/fixtures/inicio_sesion_negativo.json](/ghost-cypress-s7/cypress/fixtures/inicio_sesion_negativo.json), para poder ejecutar los 10 escenarios se hizo un loop en el archivo [](/ghost-cypress-s7/cypress/integration/Escenario-prueba91-100.js) y éste realiza la validación según el resultado esperado de cada prueba (por lo mismo, no se generan de manera independiente los scripts de prueba del 92 al 100)
-
-101-110 pool de datos (pseudo) aleatorio dinámico: (Pruebas negativas y positivas) Se realiza integración con mockaroo y se descargan los datos por medio de API (en mokaroo se generaron 6 esquemas, cada uno con su API, según las necesidades de las diferentes pruebas, algunos se re-usaron)
-
-111-120 escenario aleatorio con datos al vuelo: (Pruebas negativas y positivas) Mismos escenarios de prueba del conjunto 101-110, pero generados al vuelo con kakerjs
-
 
 El detalle del informe se encuentra en el archivo:
 
@@ -222,4 +191,44 @@ El link de acceso a Jira es https://oalvareze.atlassian.net/jira/software/c/proj
 
 Usuario: pruebas_miso@outlook.com 
 clave: PruebasMiso
+
+
+### Lote de pruebas del 1 al 30
+
+#### Estrategias de datos
+1-10 pool de datos a-priori con enfoque negativo y positivo: Se generó un conjunto de datos de 10 registros con mockaroo y se modificó manualmente para tener 10 escenarios de pruebas diferentes, se guardó el archivo en [/ghost-cypress-s7/cypress/fixtures/crear_post.json](/ghost-cypress-s7/cypress/fixtures/crear_post.json), para poder ejecutar los 10 escenarios se hizo un loop en el archivo [](/ghost-cypress-s7/cypress/integration/Escenario-prueba_1-10.js) y éste realiza la creación de las post.
+
+11-20 pool de datos (pseudo) aleatorio dinámico: Se realiza integración con mockaroo y se descargan los datos por medio de API. para poder ejecutar los 10 escenarios se hizo un loop en el archivo [](/ghost-cypress-s7/cypress/integration/Escenario-prueba_11-20.js) y éste realiza la creación de las post por medio de mockaro.
+
+21-30 escenario aleatorio con datos al vuelo usando fakerJS.
+
+### Lote de pruebas del 31 al 60
+
+#### Estrategias de datos
+31-40 pool de datos a-priori: Se generó un conjunto de datos de 10 registros con mockaroo y se modificó manualmente para tener 10 escenarios de pruebas diferentes, se guardó el archivo en [/ghost-cypress-s7/cypress/fixtures/crear_pagina.json](/ghost-cypress-s7/cypress/fixtures/crear_pagina.json), para poder ejecutar los 10 escenarios se hizo un loop en el archivo [](/ghost-cypress-s7/cypress/integration/Escenario-prueba31-40.js) y éste realiza la creación de las páginas
+
+41-50 pool de datos (pseudo) aleatorio dinámico: Se realiza integración con mockaroo y se descargan los datos por medio de API
+
+51-60 escenario aleatorio con datos al vuelo usando fakerJS
+
+### Lote de pruebas del 61 al 90
+
+#### Estrategias de datos
+61-70 pool de datos a-priori: Se generó un conjunto de datos de 10 registros con mockaroo y se modificó manualmente para tener 10 escenarios de pruebas diferentes, se guardó el archivo en [/ghost-cypress-s7/cypress/fixtures/crear_miembro_negativo.json](/ghost-cypress-s7/cypress/fixtures/crear_miembro_negativo.json),
+ [/ghost-cypress-s7/cypress/fixtures/crear_miembro_positivo.json](/ghost-cypress-s7/cypress/fixtures/crear_miembro_positivo.json) los cuales se usan para poder ejecutar los 10 escenarios se hizo un loop en el archivo [](/ghost-cypress-s7/cypress/integration/Escenario-prueba61-64.js) y [](/ghost-cypress-s7/cypress/integration/Escenario-prueba65-70.js) y éste realiza la creacion de los miembros
+
+71-80 pool de datos (pseudo) aleatorio dinámico: Se realiza integración con mockaroo y se descargan los datos por medio de API
+
+81-90 escenario aleatorio con datos al vuelo usando fakerJS
+
+
+### Lote de pruebas del 91 al 120
+
+#### Estrategias de datos
+
+91-100 pool de datos a-priori: (Pruebas negativas) Se generó un conjunto de datos de 10 registros con mockaroo (email y password) y se modificó manualmente para tener 10 escenarios de pruebas diferentes, incluyendo el texto del resultado esperado para validar que cada escenario genere el error correspondiente, se guardó el archivo en [/ghost-cypress-s7/cypress/fixtures/inicio_sesion_negativo.json](/ghost-cypress-s7/cypress/fixtures/inicio_sesion_negativo.json), para poder ejecutar los 10 escenarios se hizo un loop en el archivo [](/ghost-cypress-s7/cypress/integration/Escenario-prueba91-100.js) y éste realiza la validación según el resultado esperado de cada prueba (por lo mismo, no se generan de manera independiente los scripts de prueba del 92 al 100)
+
+101-110 pool de datos (pseudo) aleatorio dinámico: (Pruebas negativas y positivas) Se realiza integración con mockaroo y se descargan los datos por medio de API (en mokaroo se generaron 6 esquemas, cada uno con su API, según las necesidades de las diferentes pruebas, algunos se re-usaron)
+
+111-120 escenario aleatorio con datos al vuelo: (Pruebas negativas y positivas) Mismos escenarios de prueba del conjunto 101-110, pero generados al vuelo con kakerjs
 
