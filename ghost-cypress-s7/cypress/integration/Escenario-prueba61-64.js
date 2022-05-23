@@ -9,10 +9,6 @@ const url = Cypress.env('url_base');
 
 describe('Escenario de prueba 61 al 64', function () {
     before(function () {
-        cy.fixture('crear_miembro_positivo.json').then((TestCorrectData) =>
-        {
-           this.data = TestCorrectData
-        });
         cy.fixture('crear_miembro_negativo.json').then((TestData) =>
         {
             this.data_negativa = TestData
