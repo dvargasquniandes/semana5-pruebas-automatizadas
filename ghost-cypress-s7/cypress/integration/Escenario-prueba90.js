@@ -8,7 +8,7 @@ const user = {
 
 const url = Cypress.env('url_base');
 
-describe('Escenario de prueba 89', function () {
+describe('Escenario de prueba 90', function () {
     before(function () {
     })
     beforeEach(function(){

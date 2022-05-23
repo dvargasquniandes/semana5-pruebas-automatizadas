@@ -177,6 +177,16 @@ Para el proceso de comparación de las pruebas con Kraken se deben realizar los 
 
 51-60 escenario aleatorio con datos al vuelo usando fakerJS
 
+### Lote de pruebas del 61 al 90
+
+#### Estrategias de datos
+61-70 pool de datos a-priori: Se generó un conjunto de datos de 10 registros con mockaroo y se modificó manualmente para tener 10 escenarios de pruebas diferentes, se guardó el archivo en [/ghost-cypress-s7/cypress/fixtures/crear_miembro_negativo.json](/ghost-cypress-s7/cypress/fixtures/crear_miembro_negativo.json),
+ [/ghost-cypress-s7/cypress/fixtures/crear_miembro_positivo.json](/ghost-cypress-s7/cypress/fixtures/crear_miembro_positivo.json) los cuales se usan para poder ejecutar los 10 escenarios se hizo un loop en el archivo [](/ghost-cypress-s7/cypress/integration/Escenario-prueba61-64.js) y [](/ghost-cypress-s7/cypress/integration/Escenario-prueba65-70.js) y éste realiza la creacion de los miembros
+
+71-80 pool de datos (pseudo) aleatorio dinámico: Se realiza integración con mockaroo y se descargan los datos por medio de API
+
+81-90 escenario aleatorio con datos al vuelo usando fakerJS
+
 
 ### Lote de pruebas del 91 al 120
 
