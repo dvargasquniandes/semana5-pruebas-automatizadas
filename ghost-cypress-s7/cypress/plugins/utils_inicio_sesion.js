@@ -61,11 +61,45 @@ function eliminarTag(slug) {
     cy.wait(1000);
 }
 
+function crearPost(nombre, descripcion) {
+    cy.get('a[title="New post"]').click()
+    cy.wait(1000);
+    cy.get('textarea[class="gh-editor-title ember-text-area gh-input ember-view"]').type(nombre)
+    cy.get('div[class="koenig-editor__editor __mobiledoc-editor __has-no-content"]').type(descripcion)
+    cy.wait(1000)
+}
+
+function crearPostBad(nombre, descripcion) {
+    cy.get('a[title="New post"]').click()
+    cy.wait(1000);
+    cy.get('textarea[class="gh-editor-title ember-text-area gh-input ember-view"]').type(nombre)
+    cy.wait(1000);
+    cy.get('div[class="koenig-editor__editor __mobiledoc-editor __has-no-content"]').type(descripcion)
+    cy.wait(1000);
+    cy.get('textarea[class="gh-editor-title ember-text-area gh-input ember-view"]').type(nombre)
+    cy.wait(1000)
+}
+
+function publicarPost() {
+    cy.get('div[class="gh-publishmenu ember-view"]').click()
+    cy.wait(1000);
+    cy.get('button').contains("Publish").click()
+    cy.get('body').then((body) => {
+        if (body.find('gh-btn:contains("Publish")')) {
+            cy.get('button').contains("Publish").click()
+        }
+    })
+    cy.wait(1000)
+}
+
 export const utils = {
     autenticar,
     crearTagNuevo,
     corregirNombreTag,
     modificarTag,
     corregirColorTag,
-    eliminarTag
+    eliminarTag,
+    crearPost,
+    publicarPost,
+    crearPostBad
 }

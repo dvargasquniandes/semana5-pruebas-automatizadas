@@ -1,0 +1,48 @@
+{
+    "negativo": [
+        {
+            "nombre_escenario": "Titulo largo sin contenido",
+            "titulo": "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. Figured",
+            "contenido": " ",
+            "resultado_esperado" : "failed: Title cannot be longer than 255 characters.",
+            "activo": true
+        },
+        {
+            "nombre_escenario": "Titulo largo con contenido",
+            "titulo": "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. Figured",
+            "contenido": "some content",
+            "resultado_esperado" : "failed: Title cannot be longer than 255 characters.",
+            "activo": true
+        },
+        {
+            "nombre_escenario": "Titulo y contenido vacios",
+            "titulo": "",
+            "contenido": "some content",
+            "resultado_esperado" : "failed: Title cannot be longer than 255 characters.",
+            "activo": false
+        }
+    ],
+    "positivo": [
+        {
+            "nombre_escenario": "Titulo y contenido existen",
+            "titulo": "el campeon",
+            "contenido": "some content",
+            "resultado_esperado" : "Published",
+            "activo": true
+        },
+        {
+            "nombre_escenario": "Titulo exite y contenido no existe",
+            "titulo": "el campeon 2",
+            "contenido": " ",
+            "resultado_esperado" : "Published",
+            "activo": true
+        },
+        {
+            "nombre_escenario": "Titulo no exite y contenido ok",
+            "titulo": " ",
+            "contenido": "Tiene contenido",
+            "resultado_esperado" : "Published",
+            "activo": true
+        }
+    ]
+}
