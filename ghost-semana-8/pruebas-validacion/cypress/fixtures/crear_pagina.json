@@ -1,0 +1,44 @@
+[
+    {
+        "titulo": "Escenario 31",
+        "descripcion": "Esta es la descripción para el escenario 31"
+    },
+    {
+        "titulo": "Escenario 32 - Post con excerpt",
+        "descripcion": "Esta es la descripción para el escenario 32",
+        "excerpt": "Esta descripción llena el campo de excerpt"
+    },
+    {
+        "titulo": "Escenario 33 - Post con caracteres especiales ► ☼",
+        "descripcion": "↨ ▲ ╠ ╩"
+    },
+    {
+        "titulo": "Escenario 34 - Post con excerpt con caracteres especiales",
+        "descripcion": "Esta es la descripción para el escenario 34",
+        "excerpt": "↨ ▲ ╠ ╩"
+    },
+    {
+        "descripcion": "Esta es la descripción para el escenario 35"
+    },
+    {
+        "titulo": "",
+        "descripcion": "Esta es la descripción para el escenario 36"
+    },
+    {
+        "titulo": "Escenario 37 - Post con etiquetas html",
+        "descripcion": "<script>console.log('Hola mundo')</script>"
+    },
+    {
+        "titulo": "Escenario 38 - Post con un script en la descripcion",
+        "descripcion": "yum install -y httpd; systemctl start httpd;"
+    },
+    {
+        "titulo": "Escenario 39 - Post con un script en el excerpt",
+        "descripcion": "Esta es la descripción para el escenario 38",
+        "excerpt": "yum install -y httpd; systemctl start httpd;"
+    },
+    {
+        "titulo": "Escenario 40",
+        "descripcion": "Esta es la descripción para el escenario 40"
+    }
+]
