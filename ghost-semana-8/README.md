@@ -60,3 +60,9 @@ El archivo monkey-config.json ya tiene la URL del proyecto actualizada, por lo q
 ### Ejecutar pruebas de e2e 🚀
 
 ### Ejecutar pruebas vrt 🚀
+
+
+## Video
+El video de entrega de la semana 8 se puede encontrar en
+
+https://youtu.be/phn0wYBXd24 
