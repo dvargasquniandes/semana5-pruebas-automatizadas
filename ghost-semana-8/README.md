@@ -32,6 +32,17 @@ npx cypress open
 
 ### Ejecutar pruebas de reconocimiento 🚀
 
+1. Pruebas de reconocimiento con RIPuppet:
+- Ingrese a la carpeta pruebas-reconocimiento/RIPuppetCoursera
+- Ejecute 
+>npm install
+De ser necesario, verifique que tenga nodejs y python instalado en su sistema,siga las instrucciones de la siguiente URL para garantizar que tenga todas las librerías necesarias para correr RIPuppet
+
+https://github.com/TheSoftwareDesignLab/RIPuppetCoursera
+
+- Corra las pruebas con el comando
+>
+
 ### Ejecutar pruebas de e2e 🚀
 
 ### Ejecutar pruebas vrt 🚀
