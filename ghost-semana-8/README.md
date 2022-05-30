@@ -33,14 +33,14 @@ npx cypress open
 ### Ejecutar pruebas de reconocimiento 🚀
 
 ### Ejecutar pruebas de e2e 🚀
-#### Ejecutar pruebas e2e pruebas Cypress 🚀
+#### Ejecutar pruebas e2e pruebas Cypress
 1. Entrar al directorio ghost-cypress
 2. Ejecutar el comando npm install
 3. Ejecutar el comando npx cypress open
 4. Se abrirá una ventana con las pruebas a testear
 5. Clickear en la opción run all tests
 
-#### Ejecutar pruebas e2e kraken 🚀
+#### Ejecutar pruebas e2e kraken
 1. Instalar kraken, siguiendo las instrucciones en https://thesoftwaredesignlab.github.io/AutTesingCodelabs/w5/krakenWeb/index.html
 2. si se presentan problemas con las librerías globales, es mejor instalar kraken en el directorio local
 3. Si se requiere, instalar los paquetes appium (node install -g appium), adb (sudo apt install adb), cucumber (npm install -S cucumber), y chromium (sudo apt install chromium-browser), Tenga en cuenta que estas recomendaciones son para una instalación fresca de Ubuntu 22.04LTS
@@ -53,4 +53,5 @@ Si la instalación se realizó localmente, usar
 5. Dependiendo de la instalación local de ghost, deberá cambiar el usaurio y contraseña en el archivo properties.json, se asume siempre que el despliegue de ghost es local por el puerto estándar, por lo que no se tiene una variable de configuración para la url ya que los tiempos de espera estan ligados a ejecución en localhost
 
 El resultado de la ejecución de las pruebas de Kraken está en /kraken/reports
+
 ### Ejecutar pruebas vrt 🚀
