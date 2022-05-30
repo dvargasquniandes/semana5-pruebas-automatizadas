@@ -65,4 +65,4 @@ El archivo monkey-config.json ya tiene la URL del proyecto actualizada, por lo q
 ## Video
 El video de entrega de la semana 8 se puede encontrar en
 
-https://youtu.be/phn0wYBXd24 
+https://youtu.be/9mMmjuUWjf4
