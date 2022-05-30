@@ -55,3 +55,48 @@ Si la instalación se realizó localmente, usar
 El resultado de la ejecución de las pruebas de Kraken está en /kraken/reports
 
 ### Ejecutar pruebas vrt 🚀
+
+Ejecución de la comparación de las pruebas de cypress con resemble
+Para ejecutar el programa en resemble, se deben haber ejecutado las pruebas en las 2 versiones de ghost bajo prueba, se debe ingresar a la carpeta donde se encuentra el script de resemble:
+
+cd /ghost-semana8/pruebas-vrt/resemble-cypress/
+
+El script de generación está hecho en node, así que si no se han instalado las dependencias, se deben instalar con
+
+npm install resemblejs
+
+El script de generación del reporte NO realiza la prueba, solo la comparación de resultados y la generación del archivo de reporte, por lo que no se necesitan dependencias adicionales.
+
+para ejecutar el reporte, se debe ejecutar con el comando:
+
+node index.js
+
+El reporte consolida las imágenes en la carpeta
+
+resemble-cypress/results/{fecha}/
+
+{fecha} indica la fecha de ejecución de la prueba en formato ISO, dentro se encuentra un archivo index.html que contiene una tabla con todas las pruebas ejecutadas y 3 columnas, en la primera está el screenshot en la versión 3.42.0, la segunda columna el screenshot del mismo paso en la versión 4.47.1 y en la tercera columna presenta la comparación realizada con resemble. Se puede dar clic en cada imágen para ampliarla si es necesario.
+
+Como se indicó, el archivo index.html contiene el reporte unificado de TODAS LAS PRUEBAS EJECUTADAS en una misma tabla, separando con headers cada escenario y un paso por cada fila.
+
+En la entrega se suben 2 reportes ya generados, así:
+
+results/2022-05-16T01.00.39.627Z/index.html Contiene una ejecución completa de todos los escenarios de prueba con Cypress (para verificar el funcionamiento completo) results/2022-05-16T01.08.38.201Z/index.html Contiene la comparación solo con los 10 escenarios de prueba elegidos para la semana (Entrega)
+
+El reporte ordena alfabéticamente los escenarios de prueba, como el número del escenario no tiene relleno de ceros, se puede presentar en un orden no numérico.
+
+(Nota, la hora del servidor de ejecución no está configurada con el TimeZone de Colombia, por lo que la hora real de ejecución es en la noche del Domingo)
+
+Se cargaron en Jira los Issues detectados en la comparación en la siguiente URL (Los permisos de acceso se concedieron la primera semana del curso con el usuario pruebas_miso@outlook.com clave PruebasMiso)
+
+https://oalvareze.atlassian.net/jira/software/c/projects/PAG/issues
+
+Ejecución de la comparación de las pruebas de kraken con resemble
+Para el proceso de comparación de las pruebas con Kraken se deben realizar los mismos pasos que se expresaron anteriormente para el caso de resemble con cypress, solamente que en vez de hacer cd a resemble-cypress se hace al directorio resemble-kraken
+
+Ejecutar pruebas Backstop.js 🚀
+Para hacer uso de las herramientas de Backstop, debe descargar la CLI. Abra una terminal y ejecute el siguiente comando: npm install -g backstopjs
+Ahora, en la misma terminal, ubíquese en el directorio donde ubicará el nuevo directorio del proyecto y luego Ejecute el comando backstop init
+En la misma terminal donde ejecutó el anterior comando, ejecute el siguiente comando backstop approve (Esto guardará los resultados de la prueba más reciente como la referencia)
+Ahora ejecute nuevamente el comando backstop test para comparar las imágenes que se obtienen en esta prueba con las que obtuvo previamente.
+Cada vez que ejecute el comando backstop test, se modificará el archivo index.html que contiene el reporte, ubicado en el directorio html_report para mostrar las nuevas imágenes y sus diferencias. Este reporte muestra cada uno de los escenarios configurados para la prueba
