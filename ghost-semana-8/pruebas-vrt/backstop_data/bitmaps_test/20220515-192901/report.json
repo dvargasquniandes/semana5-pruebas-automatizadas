@@ -1,0 +1,180 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_Inicio_-_Ghost_version_4471_0_document_0_default.png",
+        "test": "../bitmaps_test/20220515-192901/backstop_default_Inicio_-_Ghost_version_4471_0_document_0_default.png",
+        "selector": "document",
+        "fileName": "backstop_default_Inicio_-_Ghost_version_4471_0_document_0_default.png",
+        "label": "Inicio - Ghost version 4.47.1",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/ghost/#/signin",
+        "referenceUrl": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/ghost/#/signin",
+        "expect": 0,
+        "viewportLabel": "default",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.022708333333333334,
+          "misMatchPercentage": "0.02",
+          "analysisTime": 29
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_Home_-_Ghost_version_4471__0_document_0_default.png",
+        "test": "../bitmaps_test/20220515-192901/backstop_default_Home_-_Ghost_version_4471__0_document_0_default.png",
+        "selector": "document",
+        "fileName": "backstop_default_Home_-_Ghost_version_4471__0_document_0_default.png",
+        "label": "Home - Ghost version 4.47.1 ",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/",
+        "referenceUrl": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/",
+        "expect": 0,
+        "viewportLabel": "default",
+        "diff": {
+          "isSameDimensions": false,
+          "dimensionDifference": {
+            "width": 0,
+            "height": -438
+          },
+          "rawMisMatchPercentage": 58.984463276836166,
+          "misMatchPercentage": "58.98",
+          "analysisTime": 109
+        },
+        "diffImage": "../bitmaps_test/20220515-192901/failed_diff_backstop_default_Home_-_Ghost_version_4471__0_document_0_default.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_About_-_Ghost_version_4471__0_document_0_default.png",
+        "test": "../bitmaps_test/20220515-192901/backstop_default_About_-_Ghost_version_4471__0_document_0_default.png",
+        "selector": "document",
+        "fileName": "backstop_default_About_-_Ghost_version_4471__0_document_0_default.png",
+        "label": "About - Ghost version 4.47.1 ",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/about/",
+        "referenceUrl": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/about/",
+        "expect": 0,
+        "viewportLabel": "default",
+        "error": "Reference file not found /Users/andresmartincantorurrego/Desktop/MAESTRIA/SEMESTRE 1/CICLO 2/PRUEBAS AUTOMATIZADAS /proyecto/semana5-pruebas-automatizadas/backstop_data/bitmaps_reference/backstop_default_About_-_Ghost_version_4471__0_document_0_default.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_Posts_-_Ghost_version_4471__0_document_0_default.png",
+        "test": "../bitmaps_test/20220515-192901/backstop_default_Posts_-_Ghost_version_4471__0_document_0_default.png",
+        "selector": "document",
+        "fileName": "backstop_default_Posts_-_Ghost_version_4471__0_document_0_default.png",
+        "label": "Posts - Ghost version 4.47.1 ",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/ghost/#/posts",
+        "referenceUrl": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/ghost/#/posts",
+        "expect": 0,
+        "viewportLabel": "default",
+        "error": "Reference file not found /Users/andresmartincantorurrego/Desktop/MAESTRIA/SEMESTRE 1/CICLO 2/PRUEBAS AUTOMATIZADAS /proyecto/semana5-pruebas-automatizadas/backstop_data/bitmaps_reference/backstop_default_Posts_-_Ghost_version_4471__0_document_0_default.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_Inicio_-_Ghost_version_3420_0_document_0_default.png",
+        "test": "../bitmaps_test/20220515-192901/backstop_default_Inicio_-_Ghost_version_3420_0_document_0_default.png",
+        "selector": "document",
+        "fileName": "backstop_default_Inicio_-_Ghost_version_3420_0_document_0_default.png",
+        "label": "Inicio - Ghost version 3.42.0",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://ec2-52-200-112-117.compute-1.amazonaws.com:2369/ghost/#/signin",
+        "referenceUrl": "http://ec2-52-200-112-117.compute-1.amazonaws.com:2369/ghost/#/signin",
+        "expect": 0,
+        "viewportLabel": "default",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.022916666666666665,
+          "misMatchPercentage": "0.02",
+          "analysisTime": 32
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_Home_-_Ghost_version_3420__0_document_0_default.png",
+        "test": "../bitmaps_test/20220515-192901/backstop_default_Home_-_Ghost_version_3420__0_document_0_default.png",
+        "selector": "document",
+        "fileName": "backstop_default_Home_-_Ghost_version_3420__0_document_0_default.png",
+        "label": "Home - Ghost version 3.42.0 ",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://ec2-52-200-112-117.compute-1.amazonaws.com:2369/",
+        "referenceUrl": "http://ec2-52-200-112-117.compute-1.amazonaws.com:2369/",
+        "expect": 0,
+        "viewportLabel": "default",
+        "diff": {
+          "isSameDimensions": false,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 469
+          },
+          "rawMisMatchPercentage": 15.040681502086231,
+          "misMatchPercentage": "15.04",
+          "analysisTime": 60
+        },
+        "diffImage": "../bitmaps_test/20220515-192901/failed_diff_backstop_default_Home_-_Ghost_version_3420__0_document_0_default.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_Tag_-_Ghost_version_3420__0_document_0_default.png",
+        "test": "../bitmaps_test/20220515-192901/backstop_default_Tag_-_Ghost_version_3420__0_document_0_default.png",
+        "selector": "document",
+        "fileName": "backstop_default_Tag_-_Ghost_version_3420__0_document_0_default.png",
+        "label": "Tag - Ghost version 3.42.0 ",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://ec2-52-200-112-117.compute-1.amazonaws.com:2369/tag/getting-started/",
+        "referenceUrl": "http://ec2-52-200-112-117.compute-1.amazonaws.com:2369/tag/getting-started/",
+        "expect": 0,
+        "viewportLabel": "default",
+        "error": "Reference file not found /Users/andresmartincantorurrego/Desktop/MAESTRIA/SEMESTRE 1/CICLO 2/PRUEBAS AUTOMATIZADAS /proyecto/semana5-pruebas-automatizadas/backstop_data/bitmaps_reference/backstop_default_Tag_-_Ghost_version_3420__0_document_0_default.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_Author_-_Ghost_version_3420__0_document_0_default.png",
+        "test": "../bitmaps_test/20220515-192901/backstop_default_Author_-_Ghost_version_3420__0_document_0_default.png",
+        "selector": "document",
+        "fileName": "backstop_default_Author_-_Ghost_version_3420__0_document_0_default.png",
+        "label": "Author - Ghost version 3.42.0 ",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://ec2-52-200-112-117.compute-1.amazonaws.com:2369/author/ghost/",
+        "referenceUrl": "http://ec2-52-200-112-117.compute-1.amazonaws.com:2369/author/ghost/",
+        "expect": 0,
+        "viewportLabel": "default",
+        "error": "Reference file not found /Users/andresmartincantorurrego/Desktop/MAESTRIA/SEMESTRE 1/CICLO 2/PRUEBAS AUTOMATIZADAS /proyecto/semana5-pruebas-automatizadas/backstop_data/bitmaps_reference/backstop_default_Author_-_Ghost_version_3420__0_document_0_default.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "backstop_default"
+}

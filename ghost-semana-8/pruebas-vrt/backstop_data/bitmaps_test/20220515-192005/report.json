@@ -1,0 +1,74 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_Inicio_-_Ghost_version_4471_0_document_0_default.png",
+        "test": "../bitmaps_test/20220515-192005/backstop_default_Inicio_-_Ghost_version_4471_0_document_0_default.png",
+        "selector": "document",
+        "fileName": "backstop_default_Inicio_-_Ghost_version_4471_0_document_0_default.png",
+        "label": "Inicio - Ghost version 4.47.1",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/ghost/#/signin",
+        "referenceUrl": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/ghost/#/signin",
+        "expect": 0,
+        "viewportLabel": "default",
+        "error": "Reference file not found /Users/andresmartincantorurrego/Desktop/MAESTRIA/SEMESTRE 1/CICLO 2/PRUEBAS AUTOMATIZADAS /proyecto/semana5-pruebas-automatizadas/backstop_data/bitmaps_reference/backstop_default_Inicio_-_Ghost_version_4471_0_document_0_default.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_Home_-_Ghost_version_4471__0_document_0_default.png",
+        "test": "../bitmaps_test/20220515-192005/backstop_default_Home_-_Ghost_version_4471__0_document_0_default.png",
+        "selector": "document",
+        "fileName": "backstop_default_Home_-_Ghost_version_4471__0_document_0_default.png",
+        "label": "Home - Ghost version 4.47.1 ",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/",
+        "referenceUrl": "http://ec2-54-145-214-45.compute-1.amazonaws.com:2369/",
+        "expect": 0,
+        "viewportLabel": "default",
+        "error": "Reference file not found /Users/andresmartincantorurrego/Desktop/MAESTRIA/SEMESTRE 1/CICLO 2/PRUEBAS AUTOMATIZADAS /proyecto/semana5-pruebas-automatizadas/backstop_data/bitmaps_reference/backstop_default_Home_-_Ghost_version_4471__0_document_0_default.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_Inicio_-_Ghost_version_3420_0_document_0_default.png",
+        "test": "../bitmaps_test/20220515-192005/backstop_default_Inicio_-_Ghost_version_3420_0_document_0_default.png",
+        "selector": "document",
+        "fileName": "backstop_default_Inicio_-_Ghost_version_3420_0_document_0_default.png",
+        "label": "Inicio - Ghost version 3.42.0",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://ec2-52-200-112-117.compute-1.amazonaws.com:2369/ghost/#/signin",
+        "referenceUrl": "http://ec2-52-200-112-117.compute-1.amazonaws.com:2369/ghost/#/signin",
+        "expect": 0,
+        "viewportLabel": "default",
+        "error": "Reference file not found /Users/andresmartincantorurrego/Desktop/MAESTRIA/SEMESTRE 1/CICLO 2/PRUEBAS AUTOMATIZADAS /proyecto/semana5-pruebas-automatizadas/backstop_data/bitmaps_reference/backstop_default_Inicio_-_Ghost_version_3420_0_document_0_default.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_Home_-_Ghost_version_3420__0_document_0_default.png",
+        "test": "../bitmaps_test/20220515-192005/backstop_default_Home_-_Ghost_version_3420__0_document_0_default.png",
+        "selector": "document",
+        "fileName": "backstop_default_Home_-_Ghost_version_3420__0_document_0_default.png",
+        "label": "Home - Ghost version 3.42.0 ",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://ec2-52-200-112-117.compute-1.amazonaws.com:2369/",
+        "referenceUrl": "http://ec2-52-200-112-117.compute-1.amazonaws.com:2369/",
+        "expect": 0,
+        "viewportLabel": "default",
+        "error": "Reference file not found /Users/andresmartincantorurrego/Desktop/MAESTRIA/SEMESTRE 1/CICLO 2/PRUEBAS AUTOMATIZADAS /proyecto/semana5-pruebas-automatizadas/backstop_data/bitmaps_reference/backstop_default_Home_-_Ghost_version_3420__0_document_0_default.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "backstop_default"
+}
